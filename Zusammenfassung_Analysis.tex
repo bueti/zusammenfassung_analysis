@@ -1,0 +1,201 @@
+\documentclass[a4paper,DIV10,12pt,headsepline,smallheadings,halfparskip-]{scrreprt}
+\pagestyle{headings}
+% Eine gute Codierung
+\usepackage[utf8]{inputenc}
+% Schriftart mit Umlauten
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% Deutsche Beschriftung und Silbentrennung
+\usepackage[ngerman]{babel} 
+% Für schöne Tabellen
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+% Um Grafiken zu laden
+\usepackage{graphicx}
+\usepackage{float}
+% Klickbare Indexes und Kosmetik
+\usepackage{color}
+\definecolor{black}{gray}{0} % 10% gray
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black]{hyperref}
+% Untersrecihungen
+\usepackage[normalem]{ulem}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+% Dokument Infos
+\title{Zusammenfassung Analysis I}
+\author{Benjamin Bütikofer}
+
+% Begin des eigentlichen Dokuments
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	\chapter{Funktionen und Kurven}
+	\section{Darstellung} % (fold)
+	\label{sec:darstellung}
+	
+	% section darstellung (end)
+	\subsection{Definition}
+	Unter einer Funktion versteht man eine Vorschrift, die jedem Element \(x\) aus einer Menge \(D\) genau ein Element \(y\) aus einer Menge \(M\) zuordnet.
+	
+	\subsection{Darstellung}
+	Symbolische Schreibweise
+	\newline \(y = f(x)\) mit \(x \in D\) oder
+	\newline \(f: x \rightarrow y = f(x)\) mit \(x \in D\)
+	
+	\subsection{Analytische Schreibweise}
+	Explizite Darstellung: \(y = f (x) \)
+	\newline Implizierte Darstellung: \(F(x;y) = 0\)
+	
+	\subsection{Nullstellen} % (fold)
+	\label{sec:nullstellen}
+	Eine Funktion \(y = f(x)\) besitzt an der Stelle \(x_{0}\) eine Nullstelle, wenn \(f(x_{0}) = 0\) ist.
+	\newline In einer Nullstelle schneidet oder berührt die Funktionskurve die x-Achse!
+
+	\section{Symmetrie} % (fold)
+	\subsection{Gerade Funktionen} % (fold)
+	Eine Funktion \(y = f(x)\) mit einem zum Nullpunkt symmetrischen Definitionsbereich D heisst gerade, wenn für jedes \(x \in D\) gilt:
+	\newline \(f(-x) = f(x)\)
+	
+	\subsection{Ungerade Funktionen}
+	Eine Funktion \(y = f(x)\) mit einem zum Nullpunkt symmetrischen Definitionsbereich D heisst ungerade, wenn für jedes \(x \in D\) gilt:
+	\newline \(f(-x) = -f(x)\)
+	
+	\subsection{Beweis}
+	Um zu Beweisen ob eine Funktione gerade oder ungerade ist, setzt man -x in die Funktion ein.
+	
+	\section{Monotonie}
+	\(x_{1}\) und \(x_{2}\) seien zwei beliebige Werte aus dem Definitionsbereich \(D\) einer Funktion \(y = f(x)\) mit \(x_{1} < x_{2}\). Dann heisst die Funktion:
+	\begin{itemize}
+		\item monoton wachsend, falls \(f(x_{1}) \ge f(x_{2}))\)
+		\item streng monoton wachsend, falls \(f(x_{1}) < f(x_{2}))\)
+		\item monoton fallend, falls \(f(x_{1}) \le f(x_{2}))\)
+		\item streng monoton fallend, falls \(f(x_{1}) > f(x_{2}))\)
+	\end{itemize}
+	
+	\section{Periodizität}
+	Eine Funktion \(y = f(x)\) heisst periodisch mit Periode \(p\), wenn mit jedem \(x \in D\) auch \(x \pm p\) zum Definitionsbereich \(D\) der Funktion gehört und es gilt:
+	\newline \(f(x \pm p) = f(x)\)
+	
+	\section{Umkehr/inverse Funktion}
+	Eine Funktion \(y = f(x)\) heisst umkehrbar, wenn aus \(x_{1} \neq x_{2}\) stets \(f(x_{1}) \neq f(x_{2})\) folgt. Sie muss streng monoton sein!
+	\par
+	Der Definitions- und Wertebereich wird bei einer Umkehrung getauscht:
+	\newline \(f^{-1}(f(x)) = x = f(f^{-1}(x))\)
+	\newline Bestimmung:
+	\begin{enumerate}
+		\item nach \(x\) auflösen
+		\item \(x\) und \(y\) tauschen
+	\end{enumerate}		
+	
+	\chapter{Reelle Zahlenfolgen}
+	
+	\section{Grenzwert/Limes}
+	\subsection{Definition}
+	\begin{itemize}
+		\item Die reelle Zahl \(g\) heisst \textbf{Grenzwert} (Limes) der Zahlenfolge \(a_{n}\), wenn es zu jedem \(\in > 0\) eine natürliche Zahl \(n_{0} > 0\) gibt, so dass für alle \(n > n{0}\) stets gilt: \(|a_{n}-g| < \in \)
+		\item Eine Folge \(a_{n}\) heisst \textbf{konvergent}, wenn sie einen Grenzwert \(g\) besitzt. 
+		\newline Symbolische Schreibweise: \(\lim\limits_{n \rightarrow \infty}{a_n} = g \)
+	\end{itemize}
+	
+	\subsection{Stetigkeit einer Funktion}
+	Eine in \(x_0\) und einer gewissen Umgebung von \(x_0\) definierten Funktion \(y=f(x)\) heisst an der Stelle \(x_0\) stetig, wenn der Grenzwert der Funktion an dieser Stelle vorhanden ist und mit dem dortigen Funktionswert übereinstimmt:
+	\newline
+	\hspace*{10mm}\(\lim\limits_{x \rightarrow x_0}{f(x)} = f(x_0)\)
+	\newline Graphisch: Die Funktion macht keinen Sprung.
+	
+	\subsection{Unstetigkeit}
+	Stellen in denen eine Funktion die Stetigkeitsbedingung \(\lim\limits_{x \rightarrow x_0}{f(x)} = f(x_0)\) nicht erfüllt ist, heissen Unstetigkeitsstellen.
+	\newline Eine Funktion \(f(x)\) ist also an der Stelle \(x_0\) unstetig, wenn mindestens einer der folgenden Aussagen zutrifft:
+	\begin{itemize}
+		\item \(f(x)\) ist an der Stelle \(x_0\) nicht definiert
+		\item Der Grenzwert von \(f(x)\) an der Stelle \(x_0\) ist nicht vorhanden
+		\item Funktions- und Grenzwert sind zwar vorhanden, jedoch voneinander verschieden
+	\end{itemize}
+	
+	\chapter{Differentialrechnung}
+	\section{Differenzierbarkeit einer Funktion}
+	Eine Funktion \(y=f(x)\) heisst an der Stelle \(x_0\) differenzierbar, wenn der Grenzwert
+	
+	\( \lim\limits_{\Delta x \rightarrow 0}{\frac{\Delta y}{\Delta x}} = \lim\limits_{\Delta x \rightarrow 0}{\frac{f(x_0 + \Delta x)-f(x_0)}{\Delta x}} = tan \alpha = m_{S(ekante)/T(angente)} \)
+	
+	definiert ist. Man bezeichnet ihn als die (erste) Ableitung von \(y=f(x)\) an der Stelle \(x_0\) oder als \textbf{Differentialquotient} von \(y=f(x)\) an der Stelle \(x_0\) und kennzeichnet ihn durch das Symbol:
+	
+	 \hspace*{10mm}\(y'(x_0)\), \(f'(x_0)\) oder \(\frac{dy}{dx} \mid_{x=x_0}\).
+	
+	Weitere nützliche Schreibweise:
+	
+	\hspace*{10mm}\(\frac{d}{dx}[f(x)] = f'(x)\)
+	
+	\begin{itemize}
+		\item Die Differenzierbarkeit einer Funktion \(y=f(x)\) an der Stelle \(x_0\) bedeutet, dass die Funktionskurve an dieser Stelle eine eindeutig bestimmte Tangente mit endlicher Steigung besitzt.
+		\item Die Ableitungsfunktion \(y'(x)=f'(x)\) ordnet jeder Stelle \(x\) aus einem Intervall \(I\) als funktionswert den Steigungswert (Grenzwert) zu. Man spricht dann kurz von der Ableitung einer Funktion \(y=f(x)\) an der Stelle \(x\)
+	\end{itemize}
+	Eine Betragsfunktion ist an der Stelle \(x=0\) nicht differenzierbar, da sie dort keine eindeutig bestimmte Tangente besitzt. Man muss also zu erst die rechts- und dann die linksseitige Ableitung ausrechnen.
+	\par \textbf{Tangenten:} Für die Ableitung und den Steigungswinkel \(\alpha\) gilt \(y'=tan \alpha\) 
+	
+	\section{Ableitungen der elementaren Funktionen}
+	
+	\begin{longtable}{|l|l|l|}
+		\hline
+		\multicolumn{2}{|l|}{Funktion f(x)}  & Ableitung f'(x) \\		
+		\hline
+		Konstante Funktion & c = const & 0 \\
+		\hline
+		Potenzfunktion & \(x^n\) \newline \((x^2)^{-\frac{1}{2}} \) & \(n \cdot x^{n-1}\) \newline \(\frac{1}{(x^{2})^{\frac{1}{2}}}\) \\
+		\hline
+		Wurzelfunktion & \(\sqrt{x}\) gilt nur für 2. Wurzel & \(\frac{1}{2 \sqrt{x}}\) \\
+		\hline
+		\multirow{4}{*}{Trigonometrische Funktionen} & \(sin x\) \newline \(sin 2x\) & \(cos x\) \newline \(2 cos (2x)\) \\ \cline{2-3}
+		& \(cos x\)  & \(-sin x\) \\ \cline{2-3}
+		& \(tan x\) & \(\frac{1}{cos^2 x}\) \\ \cline{2-3}
+		& \(cot x\) & \(-\frac{1}{sin^2 x}\) \\
+		\hline
+		\multirow{4}{*}{Arkusfunktionen} & \(arcsin x\) & \(\frac{1}{\sqrt{1 - x^2}} \) \\ \cline{2-3}
+		& \(arccos x\) & \(-\frac{1}{\sqrt{1-x^2}}\) \\ \cline{2-3}
+		& \(arctan x\) & \(\frac{1}{1+x^2}\) \\ \cline{2-3}
+		& \(arccot x\) & \(-\frac{1}{1+x^2}\) \\
+		\hline
+		\multirow{3}{*}{Exponentialfunktionen} & \(e^x\) & \( e^x \) \\ \cline{2-3}
+		& \(e^{2x}\) & \( 2e^{2x} \) \\ \cline{2-3}
+		& \(a^x\) & \((ln a) \cdot a^x \) \\ \hline
+		\multirow{2}{*}{Logarithmusfunktionen} & \(ln x\) & \( \frac{1}{x} \) \\ \cline{2-3}
+		& \(log_a x\) & \( \frac{1}{(ln a) \cdot x } \) \\ \hline
+		\multicolumn{3}{|l|}{Hyperbelfunktionen, Areafunktionen: Siehe Seite 17 im Skript.} \\ \hline
+	\end{longtable}
+	
+	\section{Ableitungsregeln}
+	\subsection{Faktorregel}
+	\(y = C \cdot f(x) \Rightarrow y' = C \cdot f'(x)\); C = Reelle Konstante, bleibt erhalten.
+	\subsection{Summenregel}
+	\(y = f_1(x)+f_2(x)+ ... +f_n(x) \Rightarrow y'=f'_1(x) + f'_2(x)+...+f'_n(x)\)
+	
+	Es darf gliedweise differenziert werden.
+	\subsection{Produktregel}
+	\(y=u \cdot v \Rightarrow y'=u' \cdot v + v' \cdot u\)
+	
+	Bei mehreren Termen:
+	
+	\(y=u \cdot v \cdot w \Rightarrow y'=u' \cdot v \cdot w + u \cdot v' \cdot w + u \cdot v \cdot w' \)
+	\subsection{Quotientenregel}
+	\(y = \frac{u}{v} \Rightarrow y' = \frac{u' \cdot v - v' \cdot u}{v^2}\)
+	
+	\section{Kettenregel}
+	Überlegung: Was muss zuerst berechnet werde, was gehört zusammen?
+	
+	Beispiel:
+	
+	\hspace*{10mm} \(f(x) = arccos \sqrt{x^2-1} \)
+	\newline
+	\begin{tabular}{|l|l|}
+		\hline
+	   	innerste Funktion z & \(z: x \rightarrow z(x) = x^2-1\) \\
+		\hline
+		mittlere Funktion u & \(u: z \rightarrow u(z) = \sqrt{z}\) \\
+		\hline
+		äusserste Funktion F & \(F: u \rightarrow F(u) = arccos(u) \) \\
+		\hline
+	 \end{tabular}
+	
+\end{document}
