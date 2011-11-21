@@ -198,4 +198,61 @@
 		\hline
 	 \end{tabular}
 	
+	\chapter{Differentialrechnung}
+	\section{Tangente und Normale}
+	\begin{longtable}{p{0.5\textwidth}|p{0.5\textwidth}}
+		Steigung der Tangente & \(m_T=f'(x)\)\\
+		\hline
+		Gleichung der Tangente & \(y_T = f'(x_0)(x-x_0) + y_0 \)\\
+		\hline
+		Steigung der Normalen & \(m_N=-\frac{1}{f'(x_0)} = \frac{y-y_0}{x-x_0} \)\\
+		\hline
+		Gleichung der Normalen & \(y_N = - \frac{1}{f'(x_0)}(x-x_0 + y_0) \) \\
+	\end{longtable}
+	
+	\section{Linearisierung einer Funktion}
+	In der Umgebung des Kurvenpunkts \(P=(x_0,y_0)\) kann die nichtlineare Funktion \(y=f(x)\) näherungsweise durch die lineare Funktion\newline
+	\(y - y_0 = f'(x_0) \cdot (x - x_0) \) oder \( \Delta y = f'(x_0)\Delta x \)\newline
+	ersetzt werden.
+	
+	\section{Monotonie einer Kurve} % (fold)
+	\label{sec:monotonie_einer_kurve}
+	\( y' = f'(x) > 0 \Rightarrow \) streng monoton wachsend\newline
+	\( y' = f'(x) < 0 \Rightarrow \) streng monoton fallend
+	% section monotonie_einer_kurve (end)
+	
+	\section{Krümmung einer Kurve} % (fold)
+	\label{sec:krümmung_einer_kurve}
+	\subsection{Allgemein} % (fold)
+	\label{sub:allgemein}
+	\( y'' = f''(x_0) > 0 \): Links-Krümmung. \( f'(x_0) \) muss streng monoton wachsend sein. \newline
+	\( y'' = f''(x_0) < 0 \): Rechts-Krümmung. \( f'(x_0) \) muss streng monoton fallend sein. \newline
+	Formel zur Berechnung der Krümmung einer ebenen Kurve \(y=f(x)\):\par
+	\( \kappa = \kappa (x) = \frac{y''}{[1+(y')^2]^{\frac{3}{2}}} = \frac{f''(x)}{[1+[f'(x)]^2]^{\frac{3}{2}}} \)
+	% subsection allgemein (end)
+	% section krümmung_einer_kurve (end)	
+	\section{Charakterische Kurvenpunkte} % (fold)
+	\label{sec:charakterische_kurvenpunkte}
+	\subsection{Extremum} % (fold)
+	\label{sub:extremum}
+	Eine Funktion \(y = f(x) \) besitzt an der Stelle \(x_0\) ein relatives Maximum bzw. ein relatives Minimum, wenn in einer gewissen Umgebung von \(x_0\) stets \newline
+	\(f(x_0) > f(x) \) bzw. \( f(x_0) < f(x) \) \newline
+	ist (\(x \neq x_0\)).\newline
+	
+	\( f'(x_0) = 0 \wedge f''(x_0) \neq 0 \)
+	
+	Für \(f''(x_0) > 0 \) liegt dabei eine relatives Minimum vor, für \(f''(x_0) < 0 \) dagegen ein relatives Maximum.
+	% subsection extremum (end)
+	\subsection{Wendepunkte} % (fold)
+	% \label{sub:wendepunkte}
+	Punkte \(x_0\) mit \(f''(x_0) = 0 \) und \(f'''(x_0) \neq 0 \) heissen \textbf{Wendepunkte} (die Krümmung wechselt ihre Richtung).
+	\par Kurven mit waagrechter Tangente werden als Sattelpunkte bezeichnet.
+	\par Hinreichende Bedingung für einen \textbf{Wendepunkt}: \newline
+	\(f''(x_0) = 0 \) und \( f'''(x_0) \neq 0 \)
+	\par Notwendige Bedingung für einen \textbf{Sattelpunkt}: \newline
+	\(f'(x_0) = 0 \wedge f''(x_0) = 0 \wedge f'''(x_0) \neq 0 \)
+	% subsection wendepunkte (end)
+	
+	% section charakterische_kurvenpunkte (end)
+	
 \end{document}
