@@ -22,6 +22,9 @@
 \usepackage[normalem]{ulem}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{2}
+% Mathe
+\usepackage{amsmath}
+\usepackage{mathtools}
 % Dokument Infos
 \title{Zusammenfassung Analysis I}
 \author{Benjamin Bütikofer}
@@ -254,9 +257,8 @@
 	\label{sub:extremum}
 	Eine Funktion \(y = f(x) \) besitzt an der Stelle \(x_0\) ein relatives Maximum bzw. ein relatives Minimum, wenn in einer gewissen Umgebung von \(x_0\) stets \newline
 	\(f(x_0) > f(x) \) bzw. \( f(x_0) < f(x) \) \newline
-	ist (\(x \neq x_0\)).\newline
-
-	\( f'(x_0) = 0 \wedge f''(x_0) \neq 0 \)
+	ist (\(x \neq x_0\)).
+		\[f'(x_0) = 0 \wedge f''(x_0) \neq 0 \]
 
 	Für \(f''(x_0) > 0 \) liegt dabei eine relatives Minimum vor, für \(f''(x_0) < 0 \) dagegen ein relatives Maximum.
 	% subsection extremum (end)
@@ -265,11 +267,55 @@
 	Punkte \(x_0\) mit \(f''(x_0) = 0 \) und \(f'''(x_0) \neq 0 \) heissen \textbf{Wendepunkte} (die Krümmung wechselt ihre Richtung).
 	\par Kurven mit waagrechter Tangente werden als Sattelpunkte bezeichnet.
 	\par Hinreichende Bedingung für einen \textbf{Wendepunkt}: \newline
-	\(f''(x_0) = 0 \) und \( f'''(x_0) \neq 0 \)
+	\[f''(x_0) = 0 \] und \[ f'''(x_0) \neq 0 \]
 	\par Notwendige Bedingung für einen \textbf{Sattelpunkt}: \newline
-	\(f'(x_0) = 0 \wedge f''(x_0) = 0 \wedge f'''(x_0) \neq 0 \)
+	\[f'(x_0) = 0 \wedge f''(x_0) = 0 \wedge f'''(x_0) \neq 0 \]
 	% subsection wendepunkte (end)
 
 	% section charakterische_kurvenpunkte (end)
+	\section{Kurvendisskusion}
+	Ablauf:\newline
+	\begin{itemize}
+		\item Definitionsbereich/lücken
+		\item Symmetrie (gerade, ungerade Funktion)
+		\item Nullstellen, Schnittpunkt mit der y-Achse
+		\item Pole, senkrechte Asymptoten (Polgeraden)
+		\item Ableitungen (i. d. R. bis zur 3. Ordnung)
+		\item Relative Extremwerte (Maxima, Minima)
+		\item Wendepunkte, Sattelpunkte
+		\item Verhalten der Funktion für \(x \rightarrow \pm \infty \), Asymptoten im Unendlichen
+		\item Wertebereich der Funktion
+		\item Zeichnung der Funktion in einem geeigneten Massstab
+	\end{itemize}
+	
+	\chapter{Integralrechnung}
+	\section{Einführung} % (fold)
+	\label{sec:einführung}
+	\subsection{Definition} % (fold)
+	\label{sub:definition}
+	Die Integration ist die Umkehrung der Ableitung.
+	% subsection definition (end)
+	\subsection{Stammfunktion} % (fold)
+	\label{sub:stammfunktion}
+	\begin{enumerate}
+		\item Falls es eine Stammfunktion zu einer stetigen Funktion \(f(x)\) gibt, gibt es \emph{unendlich} viele Stammfunktionen
+		\item Zwei beliebige Stammfunktionen \(F_1 (x)\) und \(F_2 (x)\) von \(f(x)\) unterscheiden sich durch eine \emph{additive} Konstante: \(F_1 (x) - F_2 (x) = C\)
+		\item Ist \(F_1 (x)\) eine \emph{beliebige} Stammfunktion von \(f (x)\), so ist auch \(F_1 (x) + C\) eine Stammfunktion von \(f (x)\). Daher lässt sich die \emph{Menge aller Stammfunktionen} in der Form \(F(x) = F_1 (x) + C \) darstellen.
+	\end{enumerate}
+	% subsection stammfunktion (end)
+	% section einführung (end)
+	\section{Das bestimmte Integral} % (fold)
+	\label{sec:das_bestimmte_integral}
+	\subsection{Unter- und Obersumme} % (fold)
+	\label{sub:unter_und_obersumme}
+	
+	% subsection unter_und_obersumme (end)
+	\subsection{Das bestimmte Integral} % (fold)
+	\label{sub:das_bestimmte_integral}
+	Es gilt:\newline
+	\[A = \lim\limits_{n \rightarrow \infty}U_n = \lim\limits_{n \rightarrow \infty}O_n = \lim\limits_{n \rightarrow \infty}\sum_{k=1}^{n} f(x_k) \Delta x_k = \int_a^b f(x)\,\mathrm{d}x \]
+	% subsection das_bestimmte_integral (end)
+	% section das_bestimmte_integral (end)
+
 
 \end{document}
