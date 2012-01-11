@@ -1,0 +1,169 @@
+\chapter{Differentialrechnen}
+\section{Differenzierbarkeit einer Funktion}
+Eine Funktion \(y=f(x)\) heisst an der Stelle \(x_0\) differenzierbar, wenn der Grenzwert
+
+\( \lim\limits_{\Delta x \rightarrow 0}{\frac{\Delta y}{\Delta x}} = \lim\limits_{\Delta x \rightarrow 0}{\frac{f(x_0 + \Delta x)-f(x_0)}{\Delta x}} = tan \alpha = m_{S(ekante)/T(angente)} \)
+
+definiert ist. Man bezeichnet ihn als die (erste) Ableitung von \(y=f(x)\) an der Stelle \(x_0\) oder als \textbf{Differentialquotient} von \(y=f(x)\) an der Stelle \(x_0\) und kennzeichnet ihn durch das Symbol:
+
+ \hspace*{10mm}\(y'(x_0)\), \(f'(x_0)\) oder \(\frac{dy}{dx} \mid_{x=x_0}\).
+
+Weitere nützliche Schreibweise:
+
+\hspace*{10mm}\(\frac{d}{dx}[f(x)] = f'(x)\)
+
+\begin{itemize}
+	\item Die Differenzierbarkeit einer Funktion \(y=f(x)\) an der Stelle \(x_0\) bedeutet, dass die Funktionskurve an dieser Stelle eine eindeutig bestimmte Tangente mit endlicher Steigung besitzt.
+	\item Die Ableitungsfunktion \(y'(x)=f'(x)\) ordnet jeder Stelle \(x\) aus einem Intervall \(I\) als funktionswert den Steigungswert (Grenzwert) zu. Man spricht dann kurz von der Ableitung einer Funktion \(y=f(x)\) an der Stelle \(x\)
+\end{itemize}
+Eine Betragsfunktion ist an der Stelle \(x=0\) nicht differenzierbar, da sie dort keine eindeutig bestimmte Tangente besitzt. Man muss also zu erst die rechts- und dann die linksseitige Ableitung ausrechnen.
+\par \textbf{Tangenten:} Für die Ableitung und den Steigungswinkel \(\alpha\) gilt \(y'=tan \alpha\)
+
+\section{Ableitungen der elementaren Funktionen}
+
+\begin{longtable}{|l|l|l|}
+	\hline
+	\multicolumn{2}{|l|}{Funktion f(x)}  & Ableitung f'(x) \\
+	\hline
+	Konstante Funktion & c = const & 0 \\
+	\hline
+	Potenzfunktion & \(x^n\) \newline \((x^2)^{-\frac{1}{2}} \) & \(n \cdot x^{n-1}\) \newline \(\frac{1}{(x^{2})^{\frac{1}{2}}}\) \\
+	\hline
+	Wurzelfunktion & \(\sqrt{x}\) gilt nur für 2. Wurzel & \(\frac{1}{2 \sqrt{x}}\) \\
+	\hline
+	\multirow{4}{*}{Trigonometrische Funktionen} & \(sin x\) \newline \(sin 2x\) & \(cos x\) \newline \(2 cos (2x)\) \\ \cline{2-3}
+	& \(cos(x)\)  & \(-sin x\) \\ \cline{2-3}
+	& \(tan(x)\) & \(\frac{1}{cos^2(x)}\), \( 1 + tan^2(x) \) \\ \cline{2-3}
+	& \(cot(x)\) & \(-\frac{1}{sin^2(x)}\) \\
+	\hline
+	\multirow{4}{*}{Arkusfunktionen} & \(arcsin(x)\) & \(\frac{1}{\sqrt{1 - x^2}} \) \\ \cline{2-3}
+	& \(arccos(x)\) & \(-\frac{1}{\sqrt{1-x^2}}\) \\ \cline{2-3}
+	& \(arctan(x)\) & \(\frac{1}{1+x^2}\) \\ \cline{2-3}
+	& \(arccot(x)\) & \(-\frac{1}{1+x^2}\) \\
+	\hline
+	\multirow{3}{*}{Exponentialfunktionen} & \(e^x\) & \( e^x \) \\ \cline{2-3}
+	& \(e^{2x}\) & \( 2e^{2x} \) \\ \cline{2-3}
+	& \(a^x\) & \((ln a) \cdot a^x \) \\ \hline
+	\multirow{2}{*}{Logarithmusfunktionen} & \(ln x\) & \( \frac{1}{x} \) \\ \cline{2-3}
+	& \(log_a x\) & \( \frac{1}{(ln a) \cdot x } \) \\ \hline
+	\multicolumn{3}{|l|}{Hyperbelfunktionen, Areafunktionen: Siehe Seite 17 im Skript.} \\ \hline
+\end{longtable}
+
+\section{Ableitungsregeln}
+\subsection{Faktorregel}
+\(y = C \cdot f(x) \Rightarrow y' = C \cdot f'(x)\); C = Reelle Konstante, bleibt erhalten.
+\subsection{Summenregel}
+\(y = f_1(x)+f_2(x)+ ... +f_n(x) \Rightarrow y'=f'_1(x) + f'_2(x)+...+f'_n(x)\)
+
+Es darf gliedweise differenziert werden.
+\subsection{Produktregel}
+\(y=u \cdot v \Rightarrow y'=u' \cdot v + v' \cdot u\)
+
+Bei mehreren Termen:
+
+\(y=u \cdot v \cdot w \Rightarrow y'=u' \cdot v \cdot w + u \cdot v' \cdot w + u \cdot v \cdot w' \)
+\subsection{Quotientenregel}
+\(y = \frac{u}{v} \Rightarrow y' = \frac{u' \cdot v - v' \cdot u}{v^2}\)
+
+\section{Kettenregel}
+Überlegung: Was muss zuerst berechnet werde, was gehört zusammen?
+
+Beispiel:
+
+\hspace*{10mm} \(f(x) = arccos \sqrt{x^2-1} \)
+\newline
+\begin{tabular}{|l|l|}
+	\hline
+   	innerste Funktion z & \(z: x \rightarrow z(x) = x^2-1\) \\
+	\hline
+	mittlere Funktion u & \(u: z \rightarrow u(z) = \sqrt{z}\) \\
+	\hline
+	äusserste Funktion F & \(F: u \rightarrow F(u) = arccos(u) \) \\
+	\hline
+ \end{tabular}
+
+\section{Tangente und Normale}
+\begin{longtable}{p{0.5\textwidth}|p{0.5\textwidth}}
+	Steigung der Tangente & \(m_T=f'(x)\)\\
+	\hline
+	Gleichung der Tangente & \(y_T = f'(x_0)(x-x_0) + y_0 \)\\
+	\hline
+	Steigung der Normalen & \(m_N=-\frac{1}{f'(x_0)} = \frac{y-y_0}{x-x_0} \)\\
+	\hline
+	Gleichung der Normalen & \(y_N = - \frac{1}{f'(x_0)}(x-x_0) + y_0 \) \\
+\end{longtable}
+
+\section{Linearisierung einer Funktion}
+In der Umgebung des Kurvenpunkts \(P=(x_0,y_0)\) kann die nichtlineare Funktion \(y=f(x)\) näherungsweise durch die lineare Funktion\newline
+\(y - y_0 = f'(x_0) \cdot (x - x_0) \) oder \( \Delta y = f'(x_0)\Delta x \)\newline
+ersetzt werden.
+
+\par Vorgehen: 
+\begin{enumerate}
+	\item Arbeitspunkt P bestimmen: \(x_0, y_0\)
+	\item Tangentensteigung:
+	\begin{enumerate}
+		\item erste Ableitung
+		\item \(m_T = f'(x_0)\)
+	\end{enumerate}
+	\item Gleichung der Tangente in P
+	\begin{enumerate}
+		\item \(\frac{y-y_0}{x-x_0} = m_T  \Rightarrow y = 2x-3\pi  \)
+	\end{enumerate}
+	\item Im Arbeitspunkt P gibt linearisierte Funktion
+	\item Exakter Wert: Ursprungsfunktion
+	\item Näherungswert: Linearisierte Funktion
+\end{enumerate}
+
+\section{Monotonie einer Kurve} % (fold)
+\label{sec:monotonie_einer_kurve}
+\( y' = f'(x) > 0 \Rightarrow \) streng monoton wachsend\newline
+\( y' = f'(x) < 0 \Rightarrow \) streng monoton fallend
+% section monotonie_einer_kurve (end)
+
+\section{Krümmung einer Kurve} % (fold)
+\label{sec:krümmung_einer_kurve}
+\subsection{Allgemein} % (fold)
+\label{sub:allgemein}
+\( y'' = f''(x_0) > 0 \): Links-Krümmung. \( f'(x_0) \) muss streng monoton wachsend sein. \newline
+\( y'' = f''(x_0) < 0 \): Rechts-Krümmung. \( f'(x_0) \) muss streng monoton fallend sein. \newline
+Formel zur Berechnung der Krümmung einer ebenen Kurve \(y=f(x)\):\par
+\( \kappa = \kappa (x) = \frac{y''}{[1+(y')^2]^{\frac{3}{2}}} = \frac{f''(x)}{[1+[f'(x)]^2]^{\frac{3}{2}}} \)
+% subsection allgemein (end)
+% section krümmung_einer_kurve (end)
+\section{Charakterische Kurvenpunkte} % (fold)
+\label{sec:charakterische_kurvenpunkte}
+\subsection{Extremum} % (fold)
+\label{sub:extremum}
+Eine Funktion \(y = f(x) \) besitzt an der Stelle \(x_0\) ein relatives Maximum bzw. ein relatives Minimum, wenn in einer gewissen Umgebung von \(x_0\) stets \newline
+\(f(x_0) > f(x) \) bzw. \( f(x_0) < f(x) \) \newline
+ist (\(x \neq x_0\)).
+	\[f'(x_0) = 0 \wedge f''(x_0) \neq 0 \]
+
+Für \(f''(x_0) > 0 \) liegt dabei eine relatives Minimum vor, für \(f''(x_0) < 0 \) dagegen ein relatives Maximum.
+% subsection extremum (end)
+\subsection{Wendepunkte, Sattelpunkte} % (fold)
+% \label{sub:wendepunkte}
+Punkte \(x_0\) mit \(f''(x_0) = 0 \) und \(f'''(x_0) \neq 0 \) heissen \textbf{Wendepunkte} (die Krümmung wechselt ihre Richtung).
+\par Kurven mit waagrechter Tangente werden als Sattelpunkte bezeichnet.
+\par Hinreichende Bedingung für einen \textbf{Wendepunkt}: \newline
+\[f''(x_0) = 0 \] und \[ f'''(x_0) \neq 0 \]
+\par Notwendige Bedingung für einen \textbf{Sattelpunkt}: \newline
+\[f'(x_0) = 0 \wedge f''(x_0) = 0 \wedge f'''(x_0) \neq 0 \]
+% subsection wendepunkte (end)
+
+% section charakterische_kurvenpunkte (end)
+\section{Kurvendisskusion}
+Ablauf:\newline
+\begin{itemize}
+	\item Definitionsbereich/lücken
+	\item Symmetrie (gerade, ungerade Funktion)
+	\item Nullstellen, Schnittpunkt mit der y-Achse
+	\item Pole, senkrechte Asymptoten (Polgeraden)
+	\item Ableitungen (i. d. R. bis zur 3. Ordnung)
+	\item Relative Extremwerte (Maxima, Minima)
+	\item Wendepunkte, Sattelpunkte
+	\item Verhalten der Funktion für \(x \rightarrow \pm \infty \), Asymptoten im Unendlichen
+	\item Wertebereich der Funktion
+	\item Zeichnung der Funktion in einem geeigneten Massstab
+\end{itemize}
