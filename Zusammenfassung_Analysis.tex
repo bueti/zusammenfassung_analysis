@@ -4,12 +4,12 @@
     ngerman, % für Umlaute, Silbentrennung etc.
     a4paper, % Papierformat
     oneside, % einseitiges Dokument
-    notitlepage, % es wird eine Titelseite verwendet, aber mit Abstract
+    % notitlepage, % es wird eine Titelseite verwendet, aber mit Abstract
     parskip=half, % Abstand zwischen Absätzen (halbe Zeile)
     headings=normal, % Größe der Überschriften verkleinern
     listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
-    bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
-    index=totoc, % Index im Inhaltsverzeichnis aufführen
+    % bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
+    % index=totoc, % Index im Inhaltsverzeichnis aufführen
     captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
     final % Status des Dokuments (final/draft)
 ]{scrreprt}
@@ -19,11 +19,11 @@
 
 % Begin des eigentlichen Dokuments
 \begin{document}
+	
 	\maketitle
 	\tableofcontents
 
 	\include{Inhalt/Funktionen_und_Kurven}
 	\include{Inhalt/Integralrechnen}
-	
 	
 \end{document}
