@@ -6,6 +6,8 @@
 \subsection{Definition} % (fold)
 \label{sub:definition}
 Die Integration ist die Umkehrung der Ableitung.
+Es gilt:
+\[A = \lim\limits_{n \rightarrow \infty}U_n = \lim\limits_{n \rightarrow \infty}O_n = \lim\limits_{n \rightarrow \infty}\sum_{k=1}^{n} f(x_k) \Delta x_k = \int_a^b f(x)\,\mathrm{d}x \]
 % subsection definition (end)
 \subsection{Stammfunktion} % (fold)
 \begin{enumerate}
@@ -20,24 +22,33 @@ Die Integration ist die Umkehrung der Ableitung.
 \[ \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} \]
 % section einführung (end)
 
-\section{Das bestimmte Integral} % (fold)
-\label{sub:das_bestimmte_integral}
-Es gilt:\newline
-\[A = \lim\limits_{n \rightarrow \infty}U_n = \lim\limits_{n \rightarrow \infty}O_n = \lim\limits_{n \rightarrow \infty}\sum_{k=1}^{n} f(x_k) \Delta x_k = \int_a^b f(x)\,\mathrm{d}x \]
-% section das_bestimmte_integral (end)
-
 \section{Das unbestimmte Integral} % (fold)
 \label{sec:das_unbestimmte_integral}
-\[ I(x) = \int_a^x f(t)\,\mathrm{d}t \]
+\[ \int f(x)\,\mathrm{d}x = F(x) + C \] \(\rightarrow F'(x) = f(x) \)
 % section das_unbestimmte_integral (end)
+
+\section{Das bestimmte Integral} % (fold)
+\label{sub:das_bestimmte_integral}
+Das bestimmte Integral berechnet eine Fläche.\newline
+Allgemein:
+\[ I(b) = \int_a^b f(x) \,\mathrm{d}x = [F(x)]_a^b \]
+Beispiel:
+\[ A = \int_0^{\pi} sin(x)\,\mathrm{d}x = [-cos(x)]_0^{\pi} \]
+% section das_bestimmte_integral (end)
 
 \section{Integration durch Substitution} % (fold)
 \label{sec:integration_durch_substitution}
+Beispiel unbestimmtes Integral:
+\[ \int x \cdot cos(x^2)\,\mathrm{d}x\]
 \begin{enumerate}
 	\item Aufstellung der Substitutionsgleichung
+	\[u = x^2 \Rightarrow \frac{\,\mathrm{d}u}{\,\mathrm{d}x} = 2x \Rightarrow \,\mathrm{d}x = \frac{\,\mathrm{d}u}{2x} \]
 	\item Durchführung der Integralsubstitution
+	\[\int x \cdot cos(x^2)\,\mathrm{d}x = \int x \cdot cos(u) \frac{\,\mathrm{d}u}{2x} = \frac{1}{2} \int cos(u)\,\mathrm{d}u \]
 	\item Integration
+	\[\frac{1}{2} \int cos(u)\,\mathrm{d}u = \frac{1}{2} \cdot sin(u) + C\]
 	\item Rücksubstitution
+	\[ \int x \cdot cos(x^2)\,\mathrm{d}x = \frac{1}{2} \cdot sin(x^2) + C\]
 \end{enumerate}
 % section integration_durch_substitution (end)
 
