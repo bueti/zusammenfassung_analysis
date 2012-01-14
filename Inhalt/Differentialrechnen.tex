@@ -68,9 +68,7 @@ Bei mehreren Termen:
 \section{Kettenregel}
 Überlegung: Was muss zuerst berechnet werde, was gehört zusammen?
 
-Beispiel:
-
-\hspace*{10mm} \(f(x) = arccos \sqrt{x^2-1} \)
+Beispiel: \(f(x) = arccos \sqrt{x^2-1} \)
 \newline
 \begin{tabular}{|l|l|}
 	\hline
@@ -80,7 +78,11 @@ Beispiel:
 	\hline
 	äusserste Funktion F & \(F: u \rightarrow F(u) = arccos(u) \) \\
 	\hline
- \end{tabular}
+ \end{tabular}\newline
+Somit gilt: \( f(x) = F(u) \cdot u(z) \cdot z(x) \).\newline
+ Daraus schliessen wir das:
+\[ f'(x) = F'(u) \cdot u'(z) \cdot z'(x) \]
+gilt. Jetzt nur noch zurück substituieren und die abgeleitete Funktion ist gefunden.
 
 \section{Tangente und Normale}
 \begin{longtable}{p{0.5\textwidth}|p{0.5\textwidth}}
