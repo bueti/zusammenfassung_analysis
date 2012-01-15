@@ -3,6 +3,7 @@
 % Schriftart mit Umlauten
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{relsize} % Schriftgröße relativ festlegen
 % Deutsche Beschriftung und Silbentrennung
 \usepackage[ngerman]{babel}
 % Für schöne Tabellen
@@ -23,3 +24,12 @@
 % Mathe
 \usepackage{amsmath}
 \usepackage{mathtools}
+% Anpassung Seitenlayout
+\usepackage[
+    automark, % Kapitelangaben in Kopfzeile automatisch erstellen
+    headsepline, % Trennlinie unter Kopfzeile
+    ilines % Trennlinie linksbündig ausrichten
+]{scrpage2}
+% Einfache Definition der Zeilenabstände und Seitenränder etc. -----------------
+\usepackage{setspace}
+\usepackage{geometry}

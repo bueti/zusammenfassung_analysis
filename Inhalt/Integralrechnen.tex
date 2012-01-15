@@ -109,7 +109,23 @@ Vorgehen:\newline
 % subsection rotation_um_die_x_achse (end)
 \subsection{Rotation um die y-Achse} % (fold)
 \label{sub:rotation_um_die_y_achse}
-\[ V_x = \pi \cdot \int_c^d x^2\,\mathrm{d}y = \pi \cdot \int_c^d [g(y)]^2\,\mathrm{d}y \]
-Die Grenzen liegen auf der y-Achse! Formel nach x auflösen.
+\[ V_y = \pi \cdot \int_c^d x^2\,\mathrm{d}y = \pi \cdot \int_c^d [g(y)]^2\,\mathrm{d}y \]
+Die Grenzen liegen auf der y-Achse! 
+\begin{enumerate}
+	\item Kurvenschnittpunkte \(P_1, P_2\) berechnen
+	\begin{enumerate}
+		\item Dazu Gleichung nach \(x\) auflösen und in zweite Gleichung einsetzen
+	\end{enumerate}
+	\item Skizze erstellen und zu berechnende Flächen markieren
+	\item Volumen berechen \(V_t = V_1 + V_2 + ... \)
+\end{enumerate}
 % subsection rotation_um_die_y_achse (end)
+\subsection{Funktion einer Parabel herleiten} % (fold)
+\label{sub:funktion_einer_parabel_herleiten}
+\textbf{Voraussetzung:} Spiegelsymmetrische Parabel, die Verschiebung der Parabel auf der x-Achse und ein Punkt \(P_1\) muss bekannt sein.\newline
+\textbf{Ansatz:} \(y = ax^2 + b = ax^2 + 0.5\)\newline
+Der Öffnungsparameter \(a\) bestimmt man aus dem Parabelpunkt \(P_1 = (1; 0.25) \).\newline
+\( a \cdot 1^2 + 0.5 = 0.25 \Rightarrow a = -0.25 \Rightarrow y = 0.25x^2 + 0.5 = -0.25(x^2-2) = -\frac{1}{4}(x^2 - 2)\)\newline
+Jetzt nur noch in die bekannte Formel zur Berechnung des Volumens eines Rotationkörpers einsetzen.
+% subsection funktion_einer_parabel_herleiten (end)
 % section volumen_eines_rotationkörpers (end)
