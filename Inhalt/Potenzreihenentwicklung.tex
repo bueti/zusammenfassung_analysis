@@ -87,3 +87,37 @@ berechnen (Voraussetzung: alle Koeffizienten $a_n \neq 0$ und der Grenzwert ist 
 	\item Konvergenzradius $r$ bestimmen
 	\item Konvergenzverhalten in den Randpunkten bestimmen
 \end{enumerate}
+
+\section{Taylor-Reihen}
+Die Taylorsche Formel sagt aus, dass man eine Funktion $f$ an der Stelle $x$ in der Umgebung eines bekannten Wertes $x_0$ als ein Polynom in $x$ schreiben kann, bis auf das sogenannte Lagrangsche Restglied. Das Restglied interessiert uns aber nicht wirklich.
+\begin{formel}
+$$f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + ... = \sum\limits_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n$$
+Die \textit{Mac Laurinsche Reihe} ist eine spezielle Form der Taylorschen Reihe für das Entwicklungszentrum $x_0 = 0$ (Nullpunkt):
+$$f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + ... = \sum\limits_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n$$
+\end{formel}
+
+\subsection{Beispiele der Taylorreihen}
+\subsubsection*{Taylorreihe der Sinusfunktion}
+Wir entwickeln die Sinusfunktion um die Stell $x_0 = \pi / 2$:
+...
+$$ \sum\limits_{n=0}^{\infty} (-1)^n \cdot \frac{(x-\pi / 2)^{2n}}{(2n)!}$$
+
+\subsubsection*{Mac Laurin Reihe der Exponentialfunktion}
+Wir bestimmen die Mac Laurinsche Reihe von $f(x) = e^x$:\\
+$f(x) = f'(x) = f''(x) = ... = f^{(n)}(x) = ... = e^x$\\
+$f(0) = f'(0) = f''(0) = ... = f^{(0)}(x) = ... = e^0 = 1$
+$$e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + ... + \frac{x^n}{n!} + ... = \sum\limits_{n=0}^{\infty} \frac{x^n}{n!}$$
+
+\subsubsection*{Mac Laurin Reihe der Cosinusfunktion}
+...
+\begin{formel}
+$$cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} +- ... =  \sum\limits_{n=0}^{\infty}(-1)^n \cdot \frac{x^{2n}}{(2n)!}$$
+\end{formel}
+
+\subsubsection*{Mac Laurin Reihe der Sinusfunktion}
+Die Mac Laurinsche Reihe der sinusfunktion erhalten wir am bequemsten durch gliedweise Differentiation der Kosinusreihe:
+\\...\\
+$$ = \sum\limits_{n=0}^{\infty} (-1)^n \cdot \frac{x^{2n+1}}{(2n+1)!}$$
+
+\subsubsection*{Näherungspolynome der Kosinusfunktion}
+Maybe... not!
