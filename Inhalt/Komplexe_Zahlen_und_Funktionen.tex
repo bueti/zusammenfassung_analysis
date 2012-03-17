@@ -1,0 +1,41 @@
+\chapter{Komplexe Zahlen und Funktionen}
+\section{Definition einer komplexen Zahl}
+Unter einer komplexen Zahl $z$ versteht man ein geordnetes Paar $(x, y)$ aus zwei reellen Zahlen $x$ und $y$. Symbolische Schreibweise:
+$$z=x + jy$$
+Die komplexe Zahl $z = x + jy$ wird dabei durch den Punkt $P(z) = (z; y)$ der $x, y$-Ebene eindeutig repräsentiert. Die reellen Bestandteile $x$ und $y$ der komplexen Zahl $z = x+ jy$ werden als Realteil und Imaginärteil von $z$ bezeichnet. Symbolische Schreibweise:
+$$Re(z), Im(z)$$
+Die Menge $\mathbb{C}=\{z|z=x+jy \text{ mit } x, y \in \mathbb{R}\}$ heisst Menge der komplexen Zahlen.
+\subsection{Weitere Grundbegriffe}
+\begin{itemize}
+	\item Zwei komplexe Zahlen sind genau dann \textbf{gleich}, wenn $Re(z_1) = Re(z_2)$ und $Im(z_1) = Im(z_2)$ gilt.
+	\item Der \textbf{Betrag} einer komplexen Zahl ist die Länge des dazugehörigen Zeigers: $|z| = \sqrt{x^2+y^2}$
+	\item Der Übergang von der komplexen Zahl $z$ zu \textbf{konjugiert} komplexzen Zahl $z^*$ bedeuted einen Vorzeichenwechsel im Imaginärteil. Der dazugehörige Zeiger liegt daher spiegelsymmetrisch zur reellen Achse. $z^* = (x + jy)^* = x + j(-y) = x - jy$
+\end{itemize}
+
+\subsection{Darstellungsformen}
+\begin{itemize}
+	\item Normalform: $$z=x + jy$$
+	\item Trigonometrische Form: $$z= r \cdot (cos\phi + j \cdot sin\phi)$$ 
+	\item Exponentialform: $$e^{j\phi} =  cos\phi + j \cdot sin\phi$$ $$ \Rightarrow z = r \cdot (cos\phi + j \cdot sin\phi) = r \cdot e^{j\phi}$$
+\end{itemize}
+Die trigonometrische Form und die Exponentialform werden auch Polarform genannt.
+
+\subsection{Umrechnung Polarform -> Kartesische Form}
+Eine in der Polarform $z = r (cos\phi + j \cdot sin\phi)$ oder $z=r \cdot e^{j\phi}$ vorliegende komplexe Zahl lässt sich mit Hilfe der Transformationsgleichung 
+$$ x = r \cdot cos\phi, y = r \cdot sin\phi$$ 
+in die kartesische Form $z = x + jy$ überführen.
+
+\subsection{Umrechnung Kartesische Form -> Polarform}
+eine in der kartesischen Form $z = x + jy$ vorliegende komplexe Zahl lässt sich mit Hilfe der Transformationsgleichungen 
+$$ r = |z| = \sqrt{x^2 + y^2}, tan \phi = \frac{y}{x}$$ 
+und unter Berüksichtigung des Quadranten, in dem der zugehörige Punkt liegt, in die trigonometrische Form $z = r(cos\phi + j \cdot sin\phi)$ bzw. die Exponentialform $z=e^{j\phi}$ überführen.
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Quadrant & I & II, III & IV \\ 
+\hline 
+$\phi =$ & $arctan \frac{y}{x}$ & $arctan \frac{y}{x}+\pi$ & $arctan \frac{y}{x} + 2\pi$ \\ 
+\hline 
+\end{tabular}
+\caption{Tabelle zum Quadranten}
+\end{table} 

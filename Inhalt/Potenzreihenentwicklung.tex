@@ -121,3 +121,29 @@ $$ = \sum\limits_{n=0}^{\infty} (-1)^n \cdot \frac{x^{2n+1}}{(2n+1)!}$$
 
 \subsubsection*{Näherungspolynome der Kosinusfunktion}
 Maybe... not!
+
+\subsection{Grenzwertregel von Bernoulli und de L'Hopital}
+\begin{definition}
+Für Grenzwerte vom Typ $"\frac{0}{0}"$ bzw. $"\frac{\infty}{\infty}"$ gilt:
+$$lim_{x \rightarrow x_0} \frac{f(x)}{g(x)} = lim_{x \rightarrow x_0} \frac{f'(x)}{g'(x)}$$
+Anmerkungen:
+\begin{itemize}
+	\item Die Bernoulli-de L'Hospitalsche Regel setzt voraus, dass die Funktion $f(x)$ und $g(x)$ in der Umgebung von $x_0$ stetig differenzierbar sind und der Grenzwert der rechten Seite existiert.
+	\item Die BdH Regel gilt sinngemäss auch für Grenzübergänge vom Typ $x \rightarrow \infty$ oder $x \rightarrow -\infty$.
+	\item In einigen Fällen muss man mehrere Male Ableiten um zum Ziel zu kommen
+\end{itemize}
+\end{definition}
+
+\subsubsection*{Nützliche Umformungen}
+\renewcommand{\arraystretch}{3}
+\begin{tabular}{|c|c|c|}
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Funktion $\phi(x)$ & Grenzwert $lim_{x \rightarrow x_0} \phi(x)$& Elementare Umformung \\ 
+\hline
+\rule[-1ex]{0pt}{2.5ex} $u(x) \cdot v(x)$ & $0 \cdot \infty$ bzw. $\infty \cdot 0$ & $\frac{\frac{u(x)}{1}}{u(x)}$ bzw. $\frac{\frac{v(x)}{1}}{u(x)}$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} $u(x) - v(x)$ &$\infty - \infty$ & $\frac{\frac{1}{v(x)}-\frac{1}{u(x)}}{\frac{1}{u(x) \cdot v(x)}}$ \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} $u(x)^{v(x)}$ & $0^0$, $\infty^0$, $1^\infty$ & $e^{v(x) \cdot ln u(x)}$ \\ 
+\hline 
+\end{tabular} 
