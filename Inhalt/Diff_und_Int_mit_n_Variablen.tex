@@ -1,0 +1,66 @@
+\chapter{Differential- und Integralrechnung für Funktion von mehren Variablen}
+\section{Funktion von mehreren Variablen}
+\begin{definition}
+Unter einer Funktion von zwei unabhängigen Variablen versteht man eine Vorschrift, die jedem geordneten Zahlenpaar $(x;y)$ aus einer Menge $D$ genau ein Element $z$ aus einer Menge $W$ zuordnet, Symbolische Schreibweise: $$z=f(x;y)$$
+Analog gelangt man zu Funktionen von mehr als zwei unabhängigen Variablen:
+$$u=f(x;y;z)$$
+Es gibt vier verschiedene Darstellungsformen:
+\begin{enumerate}
+	\item \textit{Explizit} dargestellt:
+	$$z = 2x + y + 1 \text{ oder } z = 2 \cdot sin(x-y)$$
+	\item \textit{Implizit} dargestellt:
+	$$ x^2 + y^2+z -1 = 0$$
+	\item Dargestellt in einer \textit{Funktionstabelle}.
+	\item Graphische Darstellung (als Fläche, Höhenlinien, Schnittkurven..).
+\end{enumerate}
+Die dritte und vierte Form eigenen sich nur für Funktionen mit maximal drei Variablen.
+\end{definition}
+
+\section{Grenzewert und Stetigkeit einer Funktion}
+\subsection{Grenzwert}
+\begin{definition}
+Eine Funktion zweier Variablen hat an der Stelle $(x_,y_0)$ den Grenzwert $g$, wenn sich die Funkionswerte $f(x,y)$ beim Grenzübergang $(x,y) \rightarrow (x_0,y_0)$ unabhängig vom eingeschlagenen Weg dem Wert $g$ beliebig nähern. Symbolische Schreibweise:
+$$\lim\limits_{(x,y) \rightarrow (x_0,y_0)} f(x,y) = g$$
+Bemerkung:
+\begin{enumerate}
+\item Eine Funktion kann auch in einer Definitionslücke $(x_0,y_0)$ einen Grenzwert haben, obwohl sie dort nicht definiert ist.
+\item Grenzwert auf einer Bildfläche: Je näher man zur Stelle $(x_0,y_0)$ kommt, desto flacher wird die Ebene auf der man sich bewegt.
+\end{enumerate}
+\end{definition}
+
+\subsection{Stetigkeit}
+\begin{definition}
+Eine in $(x_0,y_0)$ und einer gewissen Umgebung von $(x_0,y_0)$ definierten Funktion $z = f(x;y)$ heisst an der Stelle $(x_0,y_0)$ \textit{stetig}, wenn der \textit{Grenzwert} der Funktion an der Stelle \textit{vorhanden} ist und mit dem dortigen Funktionswert \textit{übereinstimmt}.
+$$\lim\limits_{(x,y) \rightarrow (x_0,y_0)} f(x,y) = f(x_0,y_0)$$
+Anmerkung:
+\begin{enumerate}
+\item Die Stetigkeit an einer bestimmten Stelle setzt voraus, dass die Funktion dort auf \textit{definiert} ist. Ferner muss der Grenzwert an dieser Stelle existieren und mit dem Funktionswert übereinstimmen.
+\item Eine Funktion $z = f(x,y)$ heisst dagegen an der Stelle $(x_0,y_0)$ \textit{unstetig}, wenn  $f(x_0,y_0)$ \textit{nicht} vorhanden ist oder $f(x_0,y_0)$ vom Grenzwert \textit{verschieden} ist oder dieser \textit{nicht} existiert.
+\item Eine Funktion, die an \textit{jeder} Stelle ihres Definitionsbereichs stetig ist, wird als stetige Funktion bezeichnet.
+\end{enumerate}
+\end{definition}
+
+\section{Partielle Differentiation}
+\subsection{Partielle Ableitung 1. Ordnung}
+\begin{definition}
+Ist $z = f(x,y)$ an \textit{jeder} Stelle $(x,y)$ einer gewissen Bereiches \textit{partiell} differenzierbar, so sind die partiellen Ableitungen 1. Ordnung selbst wieder \textit{Funktionen} von $x$ und $y$. Wir definieren daher allgemein:
+\begin{itemize}
+\item Partielle Ableitung 1. Ordnung nach $x$:
+$$ f_x(x;y) = \lim\limits_{\Delta x \rightarrow 0} \frac{f(x+\Delta x; y) - f(x;y)}{\Delta x}$$
+\item Partielle Ableitung 1. Ordnung nach $y$:
+$$ f_y(x;y) = \lim\limits_{\Delta y \rightarrow 0} \frac{f(x;y +\Delta y) - f(x;y)}{\Delta y}$$
+\end{itemize}
+Weitere übliche Symbole für partielle Ableitungen sind:
+$$f_x(x;y) \text{, } z_x(x;y) \text{, } \frac{\partial f}{\partial x} (x;y) \text{, } \frac{\partial z}{\partial y} (x;y)$$
+Es gelten die üblichen Ableitungsregeln aus dem ersten Semester.
+\end{definition}
+
+\subsection{Partielle Ableitungen höherer Ordnung}
+\begin{definition}
+Es wird genau gleich vorgegangen wie bei der Ableitung erster Ordnung. Die einzelnen Differentiationsschrite sind grundsätzlich in der Reihenfolge, in der die als Indizes angehängten Differentiationsvariablen im Ableitungssymbol auftreten, auszuführen. $f_{xy}$: Hier wird zunächst nach der Variablen $x$ und anschliessend nach der Variablen $y$ differenziert.
+\end{definition}
+\subsubsection{Satz von Schwarz}
+\begin{definition}
+Bei einer gemischten partiellen Ableitung $k$-ter Ordnung darf die Reihenfolge der einzelnen Differentiationsschritte vertauscht werden, wenn die partiellen Ableitungen $k$-ter Ordnung stetige Funktionen sind.
+$$ f_{xy} = f_{yx} \text{, }  f_{xxy} = f_{yxx} \text{, usw...}$$
+\end{definition}

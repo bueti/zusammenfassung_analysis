@@ -20,12 +20,25 @@ Besitzt die Partialsummenfolge $\left< s_n \right>$ jedoch \textit{keinen} Grenz
 $$ \lim\limits_{n \rightarrow \infty} a_n = 0$$
 \textit{notwendig}, nicht aber hinreichend. Mit anderen Worten: Damit die unendliche Reihe \textit{konvergiert}, müssen die Reihenglieder diese Bedingung erfüllen. $\lim\limits_{n \rightarrow \infty} a_n = 0$ heisst aber keineswegs, das die unendliche Reihe konvergiert. Eine Reihe jedoch, die das notwendige Konvergenzkriterium nicht erfüllt, kann nicht konvergent sein und ist daher \textit{divergent}.
 \end{definition}
+\begin{bsp}
+\begin{align*}
+	\lim\limits_{n \rightarrow \infty} \left(\frac{n}{n+2}\right)^{n+2} 	
+		&= \left(\frac{n}{n+2}\right)^{n} \cdot \left(\frac{n}{n+2}\right)^{2}  
+		= \left(\frac{n+2}{n}\right)^{-n} \cdot \left(\frac{n}{n+2}\right)^{2}\\
+		&= \left(1 + \frac{2}{n}\right)^{-n} \cdot \left(\frac{n}{n+2}\right)^{2} 
+		= \frac{1}{\left(1+\frac{2}{n}\right)^{n}} \cdot \left(\frac{n}{n+2}\right)^{2}\\
+		&=\frac{1}{e^{2}} \cdot \left(\frac{n}{n+2}\right)^{2} 
+		= \lim\limits_{n \rightarrow \infty} \frac{1}{e^2} \cdot \lim\limits_{n \rightarrow \infty} \left(\frac{n}{n+2}\right)^2 \\
+		&= \frac{1}{e^2} \cdot 1^2 
+		= \frac{1}{e^2} \Rightarrow \text{ Divergent! }
+\end{align*}
+\end{bsp}
 
 \subsubsection*{Quotientenkriterium}
 \begin{definition}
 Erfüllen die Glieder einer unendlichen Reihe $\sum\limits_{n=1}^{\infty} a_n $ mit $ a_n \neq 0 $ alle $ n \in \mathbb{N}^*$ die Bedingung 
 \[
-\lim_{n \rightarrow \infty} \left| \frac{a_n+1}{a_n} \right|= q < 1
+\lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n} \right|= q < 1
 \]
 so ist die Reihe \textit{konvergent}. Ist aber $q>1$, so ist die Reihe \textit{divergent}. 
 \end{definition}
@@ -64,9 +77,10 @@ $$ \lim\limits_{n\rightarrow \infty} \frac{1}{n!} = \lim\limits_{n\rightarrow \i
 \end{itemize}
 Gut zu wissen:
 \begin{itemize}
-	\item $\frac{1}{(n+1)!} = \frac{1}{(n+1)n!}$
-	\item $n! = n(n-1)(n-2)(...) = n(n-1)!$\\
-	\item $\lim\limits_{n \rightarrow \infty}(1+\frac{1}{2})^n = e$
+	\item $(n+1)! = (n+1)n!$
+	\item $(n+2)! = (n+2)(n+1)!$
+	\item $n! = n(n-1)(n-2)(...) = n(n-1)!$
+	\item $\lim\limits_{n \rightarrow \infty}(1+\frac{1}{2})^n = \lim\limits_{n \rightarrow \infty}\left(\frac{n+1}{n}\right)^n = e $
 \end{itemize}
 
 \subsection{Potenzreihen}
@@ -76,9 +90,8 @@ Die reellen Zahlen $a_0, a_1, a_2, ...$ heissen \textit{Koeffizienten} der Poten
 Zu einer etwas allgemeineren Darstellungsform der Potenzreihen gelangt man durch die Definitionsvorschrift:
 $$P(x) = \sum\limits_{n=0}^{\infty} a_n (x-x_0)^n = a_0 + a_1(x-x_0)^1 + a_2(x-x_0)^2 + ... + a_n(x-x_0)^n + ...$$
 \begin{formel}
-Der Konvergenzradius $r$ einer Potenzreihe lässit sich nach der Formel 
-$$r = \lim\limits_{n \rightarrow \infty} \left|\frac{a_n}{a_n+1}\right|$$
-$$r = \frac{1}{\lim\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_n\right|}}$$
+Der Konvergenzradius $r$ einer Potenzreihe lässt sich nach den Formeln 
+$$r = \lim\limits_{n \rightarrow \infty} \left|\frac{a_n}{a_{n+1}}\right| \text{ und } r = \frac{1}{\lim\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_n\right|}}$$
 berechnen (Voraussetzung: alle Koeffizienten $a_n \neq 0$ und der Grenzwert ist vorhanden). Die Reihe konvergiert dann für $|x| < r$ und divergiert für $|x|>r$. In den beiden Randpunkten $x_1 = \pm r$ ist das Konvergenzverhalten der Potenzreihe zunächst unbestimmt.
 \end{formel}
 
@@ -98,7 +111,7 @@ $$f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + ... = \sum\limits_{n=
 
 \subsection{Beispiele der Taylorreihen}
 \subsubsection*{Taylorreihe der Sinusfunktion}
-Wir entwickeln die Sinusfunktion um die Stell $x_0 = \pi / 2$:
+Wir entwickeln die Sinusfunktion um die Stelle $x_0 = \pi / 2$:
 ...
 $$ \sum\limits_{n=0}^{\infty} (-1)^n \cdot \frac{(x-\pi / 2)^{2n}}{(2n)!}$$
 
@@ -125,7 +138,7 @@ Maybe... not!
 \subsection{Grenzwertregel von Bernoulli und de L'Hopital}
 \begin{definition}
 Für Grenzwerte vom Typ $"\frac{0}{0}"$ bzw. $"\frac{\infty}{\infty}"$ gilt:
-$$lim_{x \rightarrow x_0} \frac{f(x)}{g(x)} = lim_{x \rightarrow x_0} \frac{f'(x)}{g'(x)}$$
+$$\lim\limits_{x \rightarrow x_0} \frac{f(x)}{g(x)} = \lim\limits_{x \rightarrow x_0} \frac{f'(x)}{g'(x)}$$
 Anmerkungen:
 \begin{itemize}
 	\item Die Bernoulli-de L'Hospitalsche Regel setzt voraus, dass die Funktion $f(x)$ und $g(x)$ in der Umgebung von $x_0$ stetig differenzierbar sind und der Grenzwert der rechten Seite existiert.
