@@ -46,7 +46,6 @@ $\phi =$ & $arctan \frac{y}{x}$ & $arctan \frac{y}{x}+\pi$ & $arctan \frac{y}{x}
 \caption{Verhalten von $\phi$}
 \end{figure} 
 
-
 \section{Komplexe Rechnung}
 \subsection{Grundrechenarten}
 \subsubsection*{Addition und Subtraktion}
@@ -92,7 +91,7 @@ Der Quotien $z_1/z_2$ zweier komplexen Zahlen $z_1$ und $z_2$ in kartesischer Fo
 	\item Der Bruch $z_1/z_2$ wird zunächst mit $z_2^*$, also dem konjugiert komplexen Nenner, erweitert:
 	\begin{align*}
 	\frac{z_1}{z_2} 	&= \frac{z_1 \cdot z_2^*}{z_2 \cdot z_2^*} &= \frac{(x_1 +jy_1) \cdot (x_2-jy_2)}{(x_2+jy_2)\cdot (x_2-jy_2)}
-\end{align*}
+	\end{align*}
 	\item Zähler und Nenner werden dann nach den aus dem Rellen bekanten Regeln "ausmultipliziert" ungter Beachtung der Beziehung $j^2 = -1$. Der Nenner des Bruchs wird dadurch (positiv) reell.
 	\item Die im Zähler stehende komplexe Zahl wird jetzt gliedweise durch den (reellen) Nenner dividiert.
 \end{enumerate}
@@ -108,7 +107,7 @@ Zwei komplexe Zahlen werden dividiert, indem man ihre Beträge dividiert und ihr
 \end{align*}
 \end{definition}
 
-\subsection{Potenzieren und Radizieren}
+\subsection{Potenzieren}
 \begin{definition}
 Eine in der Polarform vorliegende komplexe Zahl $z$ wird wie folgt \textbf{potenziert}:
 \begin{itemize}
@@ -117,13 +116,20 @@ Eine in der Polarform vorliegende komplexe Zahl $z$ wird wie folgt \textbf{poten
 	\item In trigonometrischer Schreibweise:
 	$$z^n = [r(cos\phi + j \cdot sin \phi)]^n = r^n [cos(n\phi) + j \cdot sin(n\phi)]$$
 \end{itemize}
-Eine komplexe Zahl wird in die $n$-te Potenz erhoben, in dem man ihren Betrag $r$ in die $n$-te Potenz erhebt und ihr Argument (Winkel $\phi$) mit dem Exponenten $n$ multipliziert. In der Normalform müssen die binomischen Formeln für Potenzen verwendet werden.
+Eine komplexe Zahl wird in die $n$-te Potenz erhoben, in dem man ihren Betrag $r$ in die $n$-te Potenz erhebt und ihr Argument (Winkel $\phi$) mit dem Exponenten $n$ multipliziert.
 \end{definition}
 
+\subsection{Radizieren}
 \begin{definition}
-Die Gleichung $z^n = a = a_0 \cdot e^{ja}$ $(a_0 > 0; n=1)$ besitzt im Komplexen genau $n$ verschiedene Lösungen (Wurzeln)
+Die Gleichung $z^n = a = a_0 \cdot e^{ja}$ $(a_0 > 0; n=1)$ besitzt im Komplexen genau $n$ verschiedene Lösungen (Wurzeln).
+$$r^n \cdot e^{jn\phi} = a_0  \cdot e^{j\alpha} = a_0 \cdot e^{j(\alpha +k \cdot 2\pi)} $$
+Somit gilt:
+$$ r^n = a_0 \text{ und } n\phi = \alpha + k \cdot 2\pi$$
+Alle Lösungen besitzen daher den gleichen Betrag ($r$). Der Winkel wird durch $\phi_k$ bestimmt:
+$$r = \sqrt[n]{a_0} \text{ ,}\phi_k = \frac{\alpha + k \cdot 2\pi}{n}$$
+Die Koordinaten lauten:
 $$ z_k = r(cos\phi_k + j \cdot sin\phi_k) = r \cdot e^{j\phi_k}$$
-mit
-$$ r = \sqrt[n]{a_0} \text{ und } \phi_k = \frac{a + k \cdot 2\phi}{n}$$
-($k = 0,1,2,...,n-1$). Die dazugehörigen Bildpunkte liegen in der Gaussschen Zahlenebene auf dem Mittelpunktskreis mit dem Radios $R=\sqrt[n]{a_0}$ und bilden die Ecken eines regelmässigen n-Ecks.
+($k = 0,1,2,...,n-1$). Die dazugehörigen Bildpunkte liegen in der Gaussschen Zahlenebene auf dem Mittelpunktskreis mit dem Radius $R=\sqrt[n]{a_0}$ und bilden die Ecken eines regelmässigen n-Ecks 
+
+%$z = a_0$, $a = arctan \left(\frac{x}{y}\right)$, $	r = \sqrt[n]{a_0}$, $\phi_k = \frac{a + k \cdot 2\pi}{n}$, Karteschische Koordinaten: $r^n [cos(\phi_k) + j \cdot sin(\phi_k)]$
 \end{definition}

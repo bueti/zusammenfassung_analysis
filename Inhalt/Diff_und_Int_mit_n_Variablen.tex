@@ -1,9 +1,12 @@
-\chapter{Differential- und Integralrechnung für Funktion von mehren Variablen}
+\chapter{Differential- und Integralrechnung für Funktion von mehreren Variablen}
 \section{Funktion von mehreren Variablen}
+\subsection{Definition}
 \begin{definition}
 Unter einer Funktion von zwei unabhängigen Variablen versteht man eine Vorschrift, die jedem geordneten Zahlenpaar $(x;y)$ aus einer Menge $D$ genau ein Element $z$ aus einer Menge $W$ zuordnet, Symbolische Schreibweise: $$z=f(x;y)$$
 Analog gelangt man zu Funktionen von mehr als zwei unabhängigen Variablen:
 $$u=f(x;y;z)$$
+
+\subsection{Darstellungsformen}
 Es gibt vier verschiedene Darstellungsformen:
 \begin{enumerate}
 	\item \textit{Explizit} dargestellt:
@@ -16,7 +19,23 @@ Es gibt vier verschiedene Darstellungsformen:
 Die dritte und vierte Form eigenen sich nur für Funktionen mit maximal drei Variablen.
 \end{definition}
 
-\section{Grenzewert und Stetigkeit einer Funktion}
+\subsubsection{Höhenliniendiagramm}
+\begin{definition}
+Die \textit{Höhenlinien} einer Funktion $z=f(x;y)$ genügen der impliziten Kurvengleichung
+$$f(x;y) = const. = c$$
+$c$: Wert der Höhenkoordinate $z$ (Kurvenparameter)
+\end{definition}
+Die \textit{Höhenlinien} sind die Projektionen der \textit{Linien gleicher Höhe} in die $x, y$-Koordinatenebene.
+
+\subsection{Definitions- und Wertebereich}
+Der Definitionsbereich $D$ einer Funktion $z = f(x,y)$ kann als eine flächenhafte Punktmenge in der $x, y$-Ebene aufgefasst werden.
+\begin{bsp}
+$$z = \sqrt{25-x^2-y^2}$$
+Definitionsbereich: $ 25-x^2-y^2 \geq 0$, d. h. $x^2 + y^2 \leq 25$.\\
+Wertebereich: $ 0 \leq z \leq 5$ (wegen $0\leq 25 -x^2-y^2 \leq 25$).
+\end{bsp}
+
+\section{Grenzwert und Stetigkeit einer Funktion}
 \subsection{Grenzwert}
 \begin{definition}
 Eine Funktion zweier Variablen hat an der Stelle $(x_,y_0)$ den Grenzwert $g$, wenn sich die Funkionswerte $f(x,y)$ beim Grenzübergang $(x,y) \rightarrow (x_0,y_0)$ unabhängig vom eingeschlagenen Weg dem Wert $g$ beliebig nähern. Symbolische Schreibweise:
@@ -27,6 +46,13 @@ Bemerkung:
 \item Grenzwert auf einer Bildfläche: Je näher man zur Stelle $(x_0,y_0)$ kommt, desto flacher wird die Ebene auf der man sich bewegt.
 \end{enumerate}
 \end{definition}
+
+Um den Grenzwert berechnen zu können, muss an versuchen eine Variable loszuwerden.
+\begin{bsp}
+$x$ und $y$ können auch in Polarkoordinatenform ausgedrückt werden: $x = r \cdot \text{cos} \phi \text{ und } y = r \cdot \text{sin} \phi$. Die Verwendung des trigonometrischen Pythagoras ($\text{sin}^2 \phi + \text{cos}^2 \phi = 1$) kann sich in diesem Fall anbieten:
+$$ x^2 + y^2 =  r^2 \cdot \sin^2 \phi + r^2 \cdot \text{cos}^2 \phi =r^2(\text{sin}^2 \phi + \text{cos}^2 \phi) = r^2$$
+Die Grenzwertberechnung vereinfacht sich nun auf eine unabhängige Variable ($\lim\limits_{r\rightarrow n} f(x)$).
+\end{bsp}
 
 \subsection{Stetigkeit}
 \begin{definition}
@@ -39,6 +65,9 @@ Anmerkung:
 \item Eine Funktion, die an \textit{jeder} Stelle ihres Definitionsbereichs stetig ist, wird als stetige Funktion bezeichnet.
 \end{enumerate}
 \end{definition}
+
+Für Stetigkeit im Nullpunkt $(0, 0)$ muss gelten: $\lim\limits_{(x,y) \rightarrow (0,0)} f(x) = f(0,0) = a$
+
 
 \section{Partielle Differentiation}
 \subsection{Partielle Ableitung 1. Ordnung}
@@ -55,10 +84,34 @@ $$f_x(x;y) \text{, } z_x(x;y) \text{, } \frac{\partial f}{\partial x} (x;y) \tex
 Es gelten die üblichen Ableitungsregeln aus dem ersten Semester.
 \end{definition}
 
+\begin{bsp}
+Von  $ z = -4x^3y^2 + 3xy^4 - 3x +2y +5$ die partielle Ableitung 1. Ordnung bestimmen und die Werte an der Stelle $x=1$, $y=2$ berechnen:
+\begin{itemize}
+		\item $f_x= -12x^2y^2+3y^4-3$
+		\item $f_y = -8x^3y + 12xy3 +2$
+		\item $f_x(1;2) = -3$, $f_y(1,2) = 82$, Höhenkoordinate: $z = f(1;2) = 38$
+		\item Die im Flächenpunkt $P = (1, 2, 38)$ errichteten Tangenten besitzen den folgenden Anstieg, bzw Steigungswinkel:
+		\begin{itemize}
+			\item Tangente in $x$-Richtung: $m_x = \text{tan} \alpha = -3 \Rightarrow \alpha = 180^\circ + \text{arctan}(-3) = 180^\circ - 71.6^\circ = 108.4^\circ$
+			\item Tangente in $y$-Richtung: $m_y =  \text{tan} \beta = 82 \Rightarrow \beta = \text{arctan} 82 = 89.3^\circ$
+		\end{itemize}
+\end{itemize}
+\end{bsp}
+
 \subsection{Partielle Ableitungen höherer Ordnung}
 \begin{definition}
-Es wird genau gleich vorgegangen wie bei der Ableitung erster Ordnung. Die einzelnen Differentiationsschrite sind grundsätzlich in der Reihenfolge, in der die als Indizes angehängten Differentiationsvariablen im Ableitungssymbol auftreten, auszuführen. $f_{xy}$: Hier wird zunächst nach der Variablen $x$ und anschliessend nach der Variablen $y$ differenziert.
+Es wird genau gleich vorgegangen wie bei der Ableitung erster Ordnung. Die einzelnen Differentiationsschritte sind grundsätzlich in der Reihenfolge, in der die als Indizes angehängten Differentiationsvariablen im Ableitungssymbol auftreten, auszuführen. $f_{xy}$: Hier wird zunächst nach der Variablen $x$ und anschliessend nach der Variablen $y$ differenziert.
+
+Partielle Ableitungen höherer Ordnung lassen sich auf in der Form partielle Differentialquotienten darstellen:
+$$
+f_{xx} = \frac{\partial}{\partial x} \left( \frac{\partial f}{\partial x} \right) = \frac{\partial^2 f}{\partial x^2} 
+\text{ , } 
+f_{xy} = \frac{\partial}{\partial y} \left( \frac{\partial f}{\partial x} \right) = \frac{\partial^2 f}{\partial x \partial y} 
+$$
+Beispiel 3. Ordnung:
+$$ f_{xyx} = \frac{\partial^3 f}{\partial x \partial y \partial x} $$
 \end{definition}
+
 \subsubsection{Satz von Schwarz}
 \begin{definition}
 Bei einer gemischten partiellen Ableitung $k$-ter Ordnung darf die Reihenfolge der einzelnen Differentiationsschritte vertauscht werden, wenn die partiellen Ableitungen $k$-ter Ordnung stetige Funktionen sind.
