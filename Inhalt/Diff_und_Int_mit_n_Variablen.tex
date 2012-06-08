@@ -102,7 +102,7 @@ Von  $ z = -4x^3y^2 + 3xy^4 - 3x +2y +5$ die partielle Ableitung 1. Ordnung best
 \begin{definition}
 Es wird genau gleich vorgegangen wie bei der Ableitung erster Ordnung. Die einzelnen Differentiationsschritte sind grundsätzlich in der Reihenfolge, in der die als Indizes angehängten Differentiationsvariablen im Ableitungssymbol auftreten, auszuführen. $f_{xy}$: Hier wird zunächst nach der Variablen $x$ und anschliessend nach der Variablen $y$ differenziert.
 
-Partielle Ableitungen höherer Ordnung lassen sich auf in der Form partielle Differentialquotienten darstellen:
+Partielle Ableitungen höherer Ordnung lassen sich auch in der Form partielle Differentialquotienten darstellen:
 $$
 f_{xx} = \frac{\partial}{\partial x} \left( \frac{\partial f}{\partial x} \right) = \frac{\partial^2 f}{\partial x^2} 
 \text{ , } 
@@ -117,3 +117,68 @@ $$ f_{xyx} = \frac{\partial^3 f}{\partial x \partial y \partial x} $$
 Bei einer gemischten partiellen Ableitung $k$-ter Ordnung darf die Reihenfolge der einzelnen Differentiationsschritte vertauscht werden, wenn die partiellen Ableitungen $k$-ter Ordnung stetige Funktionen sind.
 $$ f_{xy} = f_{yx} \text{, }  f_{xxy} = f_{yxx} \text{, usw...}$$
 \end{definition}
+
+\subsection{Das totale/vollständige Differential einer Funktion}
+\begin{definition}
+Die Gleichung der Tangentialebene an die Fläche $z = f(x, y)$ im Flächenpunkt $P=(x_0, y_0, z_0)$ mit $z_0 = f(x_0, y_0)$ lautet in symmetrischer Schreibweise:
+$$\Delta z = t(x, y) = f_x(x_0, y_0) \cdot (x-x_0) + f_y(x_0, y_0) \cdot (y - y_0) + f(x_0, y_0)$$
+Um $z$ zu erhalten, müssen nur $x_0$ und $y_0$ in die Ursprungsfunktion $f(x,y)$ eingesetzt werden!
+
+\end{definition}
+
+\subsubsection{Vollständiges Differential}
+\begin{definition}
+Bei einer Funktion  $z=f(x,y)$ von zwei unabhängigen Variablen beschreibt das totale Differentia:
+$$ dz = f_x(x_0, y_0) dx + f_y(x_0, y_0) dy$$
+die Änderung der Höhenkoordinate bzw. des Funktionswerts $z$ auf der im Berührungspunkt $P = (x_0, y_0, z_0)$ errichteten Tantentialebene. Dabei sind die "Differentiale"  $ dx, dy, dz$ die Koordinaten eines beliebigen Punktes auf der Tangentialebene, bezogen auf den Punkt $P$.
+
+Hier kommt noch das Bild von Slide 14
+
+Bei $n$ unabhängigen Variablen versteht man den linearen Differentialausdruck
+$$dy = f_{x_1} dx_1 + f_{x_2} dx_2 + ... + f_{x_n} dx_n = \frac{\partial f}{\partial x_1} dx_1 + \frac{\partial f}{\partial x_2} dx_2 + ... + \frac{\partial f}{\partial x_n} dx_n$$
+
+Bemerkung: $f(x+dx, y+dy) - f(x,y) = \Delta z \approx dz$
+\end{definition}
+
+\subsubsection{Implizite Differentiation}
+\begin{definition}
+Der Anstieg einer in der impliziten Form $F(x, y) = 0$ dargestellten Funktionskurve im Kurvenpunkt $P=(x,y)$ lässt sich wie folgt bestimmen:
+$$y'(P) = - \frac{F_x(x,y)}{F_y(x,y)}$$
+\end{definition}
+
+\subsubsection{Linearisierung einer Funktion}
+\begin{definition}
+In der Umgebung des Kurvenpunktes $P=(x_0,y_0)$ kann die nichtlineare Funktion $y=f(x)$ nährungsweise durch die lineare Funktion (Kurventangente)
+$$y -y_0 = f'(x_0) \cdot (x - x_0) \text{ oder } \Delta y = f'(x_0)$$
+ersetzt werden. 
+
+Analog können wir eine nichtlineare Funktion $z=f(x,y)$ in der Nähe des Punktes $P=(x_0, y_0, z_0)$ durch die Tangentialebene annähern:
+$$z=f(x,y) = f_x(x_0, y_0) \cdot (x-x_0) + f_y(x_0, y_0) \cdot (y-y_0) + z_0$$
+auch 
+$$ V= f_x(x_0, y_0, z_0) \cdot \Delta x + f_y(x_0, y_0, z_0) \cdot \Delta y + f_z(x_0, y_0, z_0) \ cdot \Delta z$$
+\end{definition}
+
+\subsubsection{Relative Extremwerte}
+\begin{definition}
+Wie bei Analysis 1 gibt es zwei Bedingungen für Extremwerte:
+\begin{itemize}
+	\item \textbf{Notwendige} Bedingung: $f_x(x_0, y_0) = 0 \wedge f_y(x_0, y_0) = 0$
+	\item \textbf{Hinreichende} Bedingung: $f_{xx}(x_0, y_0) \cdot f_{yy}(x_0, y_0)  - (f_{xy}(x_0, y_0))^2 > 0 = \Delta$
+	\item  Das Vorzeichen von \textbf{$f_xx(x_0, y_0)$} entscheidet über die Art des Extremwertes:
+	\begin{itemize}
+		\item $f_xx(x_0, y_0) < 0 \Rightarrow $ relatives \textbf{Maximum}
+		\item $f_xx(x_0, y_0) > 0 \Rightarrow $ relatives \textbf{Minimum}
+		\item falls $\Delta < 0 \Rightarrow$ Sattelpunkt
+		\item falls $\Delta = 0 \Rightarrow$ keine Aussage möglich
+		\end{itemize}
+\end{itemize}
+\end{definition}
+
+\subsection{Doppelintegrale}
+Wenn wir ein Doppelintegral berechnen wollen, müssen wir wissen, wie der Integrationsbereich $A$ aussieht und führen dann zwei Integrationsschritte durch.
+
+\begin{itemize}
+	\item \textbf{1. Fall:} $x$ liegt zwischen konstanten Grenzen, $y$ zwischen zwei Funktionen
+	$$ \iint_{(A)} f(x,y) dA$$ 
+	\item \textbf{2. Fall:} $x$ liegt zwischen zwei Funktionen, $y$ zwischen konstanten Grenzen.
+\end{itemize}

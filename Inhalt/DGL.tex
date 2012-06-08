@@ -1,0 +1,118 @@
+\chapter{Gewöhnliche Differentialgleichungen}
+\section{Grundbegriffe}
+\subsection{Definition}
+\begin{definition}
+Eine gewöhnliche Differentialgleichung ist eine Gleichung mit den Ableitungen einer unbekannten Funktion $y=f(x)$. Die Ordnung der DGL entspricht der Ordnung der höchsten Ableitung.
+
+Schreibweisen:
+\begin{itemize}
+	\item Implizit: $F(x, y, y', .. ,y^{(n)}) = 0$
+	\item Explizit: $y^{(n)} = f(x, y, y' .. y^{(n-1)})$
+\end{itemize}
+
+Eine Funktion $y=y(x)$ heisst Lösung der DGL, wenn sie mit ihren Ableitungen die DGL identisch erfüllt. Wir unterscheiden:
+\begin{itemize}
+	\item Allgemeine Lösung: Enthält noch $n$ Integrationskonstanten.
+	\item Spezielle oder partikuläre Lösung: Die $n$ Integrationskonstanten der allgemeinen Lösung werden durch $n$ usätzliche Bedinungen (z. B. Anfangs- oder Randwertbedinungen) festgelegt.
+	\item Singuläre Lösung: eine Lösung der DGL die sicht nicht aus der allgemeinen Lösung gewinnen lässt. (?)
+\end{itemize}
+$n$ bezieht sich auf die Anzahl unterschiedlichen Konstanten und wird durch die Ordnung der DGL festgelegt. In unserem Fall ist $n$ immer 1.
+\end{definition}
+
+\subsection{Lösung einer DGL}
+Im einfachsten Fall, z. B. für die DGL vom Typ $y^{(n)} = f(x)$ kann die \textit{allgemeine} Lösung (Integrale) durch mehrmalige ($n$-mal) (unbestimmte) Integration der DGL gewonnen werden.
+\begin{align*}
+	 \text{Gegeben: } y' &= 2x\\
+	  y &= \int y' dx = \int 2x dx = x^2 + C  \text{        }(C \in \mathbb{R})	
+\end{align*}
+
+\subsubsection*{Anfangswertprobleme}
+
+\begin{itemize}
+	\item Von der gesuchten Lösung $y = y(x)$ einer DGL n-ter Ordnung sind genau $n$ Werte, nämlich der Funktionswert $y(x_0)$ sowie die Werte der ersten $n-1$ Ableitungen an der Stelle $x_0$ vorgegeben, also:
+	$$y(x_0), y'(x_0), y''(x_0), ..., y(^{n-1})(x_0)$$
+	\item Aus diesen Anfangsbedingungen lassen sich die $n$ Integrationskonstanten $C_1, ..., C_n$ der allg. Lösung bestimmen.
+\end{itemize}
+Für die DGL 1. Ordnung heisst das: Gesuch ist diejenige spezielle Lösungskurve der DGL, die durch den vorgegebenen Punkt $P = (x_0, y(x_0))$ verläuft.
+
+\begin{bsp}
+\begin{align*}
+	 \text{Gegeben: } y' &= 2x\text{ , } y(0) = 1\\
+	  y &= \int y' dx = \int 2x dx = x^2 + C  \text{        }(C \in \mathbb{R}) \\
+	  \text{Bestimmung des Parameters: } y(0) &= 1 \Rightarrow 0 + C = 1 \Rightarrow C = 1\\
+	  \text{Gesuchte spezielle Lösung: } y &= x^2 + 1
+\end{align*}
+\end{bsp}
+
+\subsubsection*{Randwertprobleme}
+\begin{itemize}
+	\item Von der gesuchten Lösung $y=y(x)$ einer DGL $n$-ter Ordunung sind genau die Funktionswert $y(x_1), y(x_2), ... y(x_n)$ an den Stellen $x_1, x_2, ..., x_n$ vorgegeben.
+	\item Aus diesen Anfangsbedingungen lassen sich die $n$ Integrationskonstanten $C_1, ..., C_2$ der allg. Lsg. bestimmen.
+\end{itemize}
+Für die DGL 1. Ordnung heisst das: Die Lösungskurve $y=y(x)$ ist so zu bestimmen, dass sie durch den vorgegebenen Punkt $P_y=(x_1, y_1)$ verläuft.
+
+
+\section{DGL mit trennbaren Variablen}
+eine DGL 1. Ordnung vom Typ
+$$y' = f(x) \cdot g(y)$$
+heisst separabel und lässt sich durch Trennung der Variablen lösen. Dabei wird die DGL zuerst umgestellt und anschliessend integriert:
+$$\frac{dy}{dx} = f(x) \cdot g(y) \Rightarrow \frac{dy}{g(y)} = f(x) dx \Rightarrow \int \frac{1}{g(y)}dy = \int f(x)dx$$
+Auflösen nach $y(x)$ liefert schliesslich (häufig) die gewünschte Lösung.
+
+\subsection{Vorgehen}
+\begin{enumerate}
+	\item \textit{Trennung} der beiden Variablen
+	\item \textit{Integration} auf beiden Seiten der Gleichung
+	\item \textit{Auflösen} der in Form einer impliziten Gleichung vom Typ $F_1(y) = F_2(x)$ vorliegenden allgemeinen Lösung nach der Variablen $y$ (falls möglich)
+\end{enumerate}
+
+\begin{bsp}
+\begin{align*}
+	 \text{Gegeben: }x + yy' = 0\text{ , } y(0) = 2\\
+	  \text{Trennung der Variablen: } x+y \frac{dy}{dx} &= 0 \Rightarrow y\frac{dy}{dx} = -x \Rightarrow y dy = -x dx \\
+	  \text{Integ. auf b. Seiten: } \int y dy = - \int x dx \Rightarrow \frac{1}{2}y^2 = - \frac{1}{2}x^2 + C \Rightarrow y^2 = -x^2 + 2C \\
+	  \text{Gesuchte spezielle Lösung: } y &= x^2 + 1
+\end{align*}
+Allgemeine Lösung der DGL:
+	 $$y^2 = -x ^2 + 2 C \text{      oder      } x^2 + y^2 = 2C$$
+Spezielle Lsg für $y(0) = 2$ (Lsgkurve durch Punkt (0, 2):
+$$y(0) = 2 \Rightarrow 4 = 2C \text{, d. h. } C = 2 \text{ und somit } R = "$$
+Die Lösung unserer Anfangswertaufgabe führt zu dem Mittelpunktskreis $x^2 + y^2 = 4$ mit dem Radius $R = 2$
+\end{bsp}
+
+\section{Integration einer DGL durch Substitution}
+In einigen Fällen ist es möglich, eine explizite DGL 1. Ordnung mittels eine geeigneten Substitution auf eine seperable DGL zurückzuführen. Diese lässt sich dann wie vorher beschrieben durch Trennung der Variablen lösen. Es gibt dabei zwei Typen:
+\begin{enumerate}
+	\item Typ: $y' = f(ax + by + c)$
+	\item Typ: $y' = f(\frac{y}{x})$
+\end{enumerate}
+
+\subsection{Typ 1}
+\begin{itemize}
+	\item Substitution: $u = ax + by + x$, wobei $u = u(x)$ und $y = y(x)$ Funktionen in $x$ sind!
+	\item Unter Berücksichtigung, dass $y' = f(u)$ ist, erhalten wir:
+	$$\frac{du}{dx} = a + b \cdot y' = a + b \cdot f(u)$$
+	\item Daraus können wir $u(x)$ mittel Separation der Variablen bestimmen
+	\item Durch anschliessendes Einsetzen (Rücksubstitution) erhalten wir $y(x) = \frac{u(x) - ax - c}{b}$
+\end{itemize}
+
+\begin{bsp}
+\begin{align*}
+.
+\end{align*}
+\end{bsp}
+
+\subsection{Typ 2}
+\begin{itemize}
+	\item Substitution: $u = \frac{y}{x}$, wobei $u = u(x)$ und $y = y(x)$ Funktionen in $x$ sind!
+	\item Unter Berücksichtigung, dass $y' = f(u)$ ist, erhalten wir:
+	$$\frac{du}{dx} = \frac{y' \cdot x -y }{x'2} = \frac{y' -\frac{y}{x}}{x} = \frac{f(u)-u}{x}$$
+	\item Daraus können wir $u(x)$ mittel Separation der Variablen bestimmen
+	\item Durch anschliessendes Einsetzen (Rücksubstitution) erhalten wir $y(x) = u(x) \cdot x$
+\end{itemize}
+
+\begin{bsp}
+\begin{align*}
+.
+\end{align*}
+\end{bsp}
