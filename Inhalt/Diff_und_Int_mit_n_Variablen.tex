@@ -38,9 +38,8 @@ Wertebereich: $ 0 \leq z \leq 5$ (wegen $0\leq 25 -x^2-y^2 \leq 25$).
 \section{Grenzwert und Stetigkeit einer Funktion}
 \subsection{Grenzwert}
 \begin{definition}
-Eine Funktion zweier Variablen hat an der Stelle $(x_,y_0)$ den Grenzwert $g$, wenn sich die Funkionswerte $f(x,y)$ beim Grenzübergang $(x,y) \rightarrow (x_0,y_0)$ unabhängig vom eingeschlagenen Weg dem Wert $g$ beliebig nähern. Symbolische Schreibweise:
+Eine Funktion zweier Variablen hat an der Stelle $(x_,y_0)$ den Grenzwert $g$, wenn sich die Funktionswerte $f(x,y)$ beim Grenzübergang $(x,y) \rightarrow (x_0,y_0)$ unabhängig vom eingeschlagenen Weg dem Wert $g$ beliebig nähern. Symbolische Schreibweise:
 $$\lim\limits_{(x,y) \rightarrow (x_0,y_0)} f(x,y) = g$$
-Bemerkung:
 \begin{enumerate}
 \item Eine Funktion kann auch in einer Definitionslücke $(x_0,y_0)$ einen Grenzwert haben, obwohl sie dort nicht definiert ist.
 \item Grenzwert auf einer Bildfläche: Je näher man zur Stelle $(x_0,y_0)$ kommt, desto flacher wird die Ebene auf der man sich bewegt.
@@ -72,17 +71,21 @@ Für Stetigkeit im Nullpunkt $(0, 0)$ muss gelten: $\lim\limits_{(x,y) \rightarr
 \section{Partielle Differentiation}
 \subsection{Partielle Ableitung 1. Ordnung}
 \begin{definition}
-Ist $z = f(x,y)$ an \textit{jeder} Stelle $(x,y)$ einer gewissen Bereiches \textit{partiell} differenzierbar, so sind die partiellen Ableitungen 1. Ordnung selbst wieder \textit{Funktionen} von $x$ und $y$. Wir definieren daher allgemein:
-\begin{itemize}
-\item Partielle Ableitung 1. Ordnung nach $x$:
-$$ f_x(x;y) = \lim\limits_{\Delta x \rightarrow 0} \frac{f(x+\Delta x; y) - f(x;y)}{\Delta x}$$
-\item Partielle Ableitung 1. Ordnung nach $y$:
-$$ f_y(x;y) = \lim\limits_{\Delta y \rightarrow 0} \frac{f(x;y +\Delta y) - f(x;y)}{\Delta y}$$
-\end{itemize}
-Weitere übliche Symbole für partielle Ableitungen sind:
-$$f_x(x;y) \text{, } z_x(x;y) \text{, } \frac{\partial f}{\partial x} (x;y) \text{, } \frac{\partial z}{\partial y} (x;y)$$
-Es gelten die üblichen Ableitungsregeln aus dem ersten Semester.
+Ist $z = f(x,y)$ an \textit{jeder} Stelle $(x,y)$ einer gewissen Bereiches \textit{partiell} differenzierbar, so sind die partiellen Ableitungen 1. Ordnung selbst wieder \textit{Funktionen} von $x$ und $y$. 
+$$ z_x = \frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} \cdot \frac{\partial u}{\partial x}$$
+$$ z_x = \frac{\partial z}{\partial x} = \frac{\partial z}{\partial x} \cdot \frac{\partial v}{\partial u} \cdot \frac{\partial u}{\partial x}$$
+
+Übliche Symbole für partielle Ableitungen sind:
+$$f_x(x, y) \text{ , } z_x(x, y) \text{ , } \frac{\partial f}{\partial x} (x, y) \text{, } \frac{\partial z}{\partial y} (x, y)$$
 \end{definition}
+
+\begin{bsp}
+$z = \sqrt{2xy -y^2} \text{ ;  } u = 2xy - y^2 \Rightarrow z = \sqrt{u}$
+\begin{align*}
+	z_x &= \frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} \cdot \frac{\partial u}{\partial x} = \frac{1}{2 \sqrt{u}} \cdot 2y = \frac{y}{\sqrt{u}} = \frac{y}{\sqrt{2xy-y^2}} \\
+	z_y &= \frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} \cdot \frac{\partial u}{\partial y} = \frac{1}{2 \sqrt{u}} \cdot (2x-2y) = \frac{x-y}{\sqrt{u}} = \frac{x-y}{\sqrt{2xy-y^2}}
+\end{align*}
+\end{bsp}
 
 \begin{bsp}
 Von  $ z = -4x^3y^2 + 3xy^4 - 3x +2y +5$ die partielle Ableitung 1. Ordnung bestimmen und die Werte an der Stelle $x=1$, $y=2$ berechnen:
@@ -100,7 +103,9 @@ Von  $ z = -4x^3y^2 + 3xy^4 - 3x +2y +5$ die partielle Ableitung 1. Ordnung best
 
 \subsection{Partielle Ableitungen höherer Ordnung}
 \begin{definition}
-Es wird genau gleich vorgegangen wie bei der Ableitung erster Ordnung. Die einzelnen Differentiationsschritte sind grundsätzlich in der Reihenfolge, in der die als Indizes angehängten Differentiationsvariablen im Ableitungssymbol auftreten, auszuführen. $f_{xy}$: Hier wird zunächst nach der Variablen $x$ und anschliessend nach der Variablen $y$ differenziert.
+Es wird genau gleich vorgegangen wie bei der Ableitung erster Ordnung. Die einzelnen Differentiationsschritte sind in der Reihenfolge, in der die als Indizes angehängten Differentiationsvariablen im Ableitungssymbol auftreten, auszuführen. 
+
+$f_{xy}$: Hier wird zunächst nach der Variablen $x$ und anschliessend nach der Variablen $y$ differenziert.
 
 Partielle Ableitungen höherer Ordnung lassen sich auch in der Form partielle Differentialquotienten darstellen:
 $$
@@ -128,7 +133,7 @@ Um $z$ zu erhalten, müssen nur $x_0$ und $y_0$ in die Ursprungsfunktion $f(x,y)
 
 \subsubsection{Vollständiges Differential}
 \begin{definition}
-Bei einer Funktion  $z=f(x,y)$ von zwei unabhängigen Variablen beschreibt das totale Differentia:
+Bei einer Funktion  $z=f(x,y)$ von zwei unabhängigen Variablen beschreibt das totale Differential:
 $$ dz = f_x(x_0, y_0) dx + f_y(x_0, y_0) dy$$
 die Änderung der Höhenkoordinate bzw. des Funktionswerts $z$ auf der im Berührungspunkt $P = (x_0, y_0, z_0)$ errichteten Tantentialebene. Dabei sind die "Differentiale"  $ dx, dy, dz$ die Koordinaten eines beliebigen Punktes auf der Tangentialebene, bezogen auf den Punkt $P$.
 
@@ -155,7 +160,7 @@ ersetzt werden.
 Analog können wir eine nichtlineare Funktion $z=f(x,y)$ in der Nähe des Punktes $P=(x_0, y_0, z_0)$ durch die Tangentialebene annähern:
 $$z=f(x,y) = f_x(x_0, y_0) \cdot (x-x_0) + f_y(x_0, y_0) \cdot (y-y_0) + z_0$$
 auch 
-$$ V= f_x(x_0, y_0, z_0) \cdot \Delta x + f_y(x_0, y_0, z_0) \cdot \Delta y + f_z(x_0, y_0, z_0) \ cdot \Delta z$$
+$$ V= f_x(x_0, y_0, z_0) \cdot \Delta x + f_y(x_0, y_0, z_0) \cdot \Delta y + f_z(x_0, y_0, z_0) \cdot \Delta z$$
 \end{definition}
 
 \subsubsection{Relative Extremwerte}
@@ -164,10 +169,10 @@ Wie bei Analysis 1 gibt es zwei Bedingungen für Extremwerte:
 \begin{itemize}
 	\item \textbf{Notwendige} Bedingung: $f_x(x_0, y_0) = 0 \wedge f_y(x_0, y_0) = 0$
 	\item \textbf{Hinreichende} Bedingung: $f_{xx}(x_0, y_0) \cdot f_{yy}(x_0, y_0)  - (f_{xy}(x_0, y_0))^2 > 0 = \Delta$
-	\item  Das Vorzeichen von \textbf{$f_xx(x_0, y_0)$} entscheidet über die Art des Extremwertes:
+	\item  Das Vorzeichen von \textbf{$f_{xx}(x_0, y_0)$} entscheidet über die Art des Extremwertes:
 	\begin{itemize}
-		\item $f_xx(x_0, y_0) < 0 \Rightarrow $ relatives \textbf{Maximum}
-		\item $f_xx(x_0, y_0) > 0 \Rightarrow $ relatives \textbf{Minimum}
+		\item $f_{xx}(x_0, y_0) < 0 \Rightarrow $ relatives \textbf{Maximum}
+		\item $f_{xx}(x_0, y_0) > 0 \Rightarrow $ relatives \textbf{Minimum}
 		\item falls $\Delta < 0 \Rightarrow$ Sattelpunkt
 		\item falls $\Delta = 0 \Rightarrow$ keine Aussage möglich
 		\end{itemize}
@@ -176,9 +181,31 @@ Wie bei Analysis 1 gibt es zwei Bedingungen für Extremwerte:
 
 \subsection{Doppelintegrale}
 Wenn wir ein Doppelintegral berechnen wollen, müssen wir wissen, wie der Integrationsbereich $A$ aussieht und führen dann zwei Integrationsschritte durch.
-
 \begin{itemize}
 	\item \textbf{1. Fall:} $x$ liegt zwischen konstanten Grenzen, $y$ zwischen zwei Funktionen
 	$$ \iint_{(A)} f(x,y) dA$$ 
 	\item \textbf{2. Fall:} $x$ liegt zwischen zwei Funktionen, $y$ zwischen konstanten Grenzen.
 \end{itemize}
+
+\subsubsection{Allgemein}
+\begin{enumerate}
+	\item Fall: Wir müssen zuerst nach $y$ integrieren (inneres Integral) und danach das äussere Integral nach $x$ integrieren.
+	\item Fall:Wir müssen zuerst nach $x$ integrieren (inneres Integral) und danach das äussere Integral nach $y$ integrieren.
+\end{enumerate}
+
+\subsubsection{Doppelintegrale in Polarkoordinaten}
+Je nach Problemstellung vereinfacht sich die Berechnung eines Doppelintegrals erheblich, wenn man an Stelle der kartesischen Koordinaten die Polarkoordiaten verwendet:
+\begin{itemize}
+\item $x = r \cdot cos\phi$
+\item $y = r \cdot sin\phi$
+\item $ \geq 0$ und $0 \leq \phi < 2\pi$
+\end{itemize}
+Integrationsbereiche bei denen diese Form angewendet werden kann werden von zwei Strahlen $\phi_1$ und $\phi_2$, sowie einer inneren Kurve $r_i(\phi)$ und einer äusseren Kurve $r_a(\phi)$ begrenzt. Für das infinitesimale Flächenelement gilt: $dA = (rd\phi) \cdot dr = rd\phi dr$. Das Doppelintegral besitzt die folgende Form:
+$$\iint\limits_{(A)} f(x, y) da = \int\limits_{\phi = \phi_1}^{\phi2} \int\limits_{r = r_i(\phi)}^{r_a(\phi)} f(r\cdot cos\phi, r \cdot sin \phi) \cdot r \cdot dr d\phi$$
+\begin{figure}[H]
+\centering
+	\includegraphics[width=5cm]{Bilder/dipolar_1}
+	\caption{Flächenelemen $dA$ in Polarkoordinaten}
+	\label{dipolar1}
+\end{figure} 
+
