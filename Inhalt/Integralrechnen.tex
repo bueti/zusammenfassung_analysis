@@ -10,16 +10,24 @@ Es gilt:
 \[A = \lim\limits_{n \rightarrow \infty}U_n = \lim\limits_{n \rightarrow \infty}O_n = \lim\limits_{n \rightarrow \infty}\sum_{k=1}^{n} f(x_k) \Delta x_k = \int_a^b f(x)\,\mathrm{d}x \]
 % subsection definition (end)
 \subsection{Stammfunktion} % (fold)
+\begin{definition}
+Unter einer Stammfunktion einer reellen Funktion $f$ versteht man eine differenzierbare Funktion $F$, deren Ableitungsfunktion $F'$ mit $f$ übereinstimmt.
+
+
 \begin{enumerate}
 	\item Falls es eine Stammfunktion zu einer stetigen Funktion \(f(x)\) gibt, gibt es \emph{unendlich} viele Stammfunktionen
 	\item Zwei beliebige Stammfunktionen \(F_1 (x)\) und \(F_2 (x)\) von \(f(x)\) unterscheiden sich durch eine \emph{additive} Konstante: \(F_1 (x) - F_2 (x) = C\)
 	\item Ist \(F_1 (x)\) eine \emph{beliebige} Stammfunktion von \(f (x)\), so ist auch \(F_1 (x) + C\) eine Stammfunktion von \(f (x)\). Daher lässt sich die \emph{Menge aller Stammfunktionen} in der Form \(F(x) = F_1 (x) + C \) darstellen.
 \end{enumerate}
+\end{definition}
 % section einführung (end)
 
-\section{Unter- und Obersumme}
-\[ \sum_{k=1}^{n} k = \frac{n(n+1)}{2} \]
-\[ \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} \]
+%%
+% Move me to where i belong! unfortunately i don't know where you belong to...
+%%
+%\section{Unter- und Obersumme}
+%\[ \sum_{k=1}^{n} k = \frac{n(n+1)}{2} \]
+%\[ \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} \]
 % section einführung (end)
 
 \section{Das unbestimmte Integral} % (fold)
@@ -29,16 +37,12 @@ Es gilt:
 
 \section{Das bestimmte Integral} % (fold)
 \label{sub:das_bestimmte_integral}
-Das bestimmte Integral berechnet eine Fläche.\newline
+Das bestimmte Integral berechnet eine Fläche zwischen zwei Punkten $a$ und $b$.\newline
 Allgemein:
 \[ I(b) = \int_a^b f(x) \,\mathrm{d}x = [F(x)]_a^b \]
-Beispiel:
-\[ A = \int_0^{\pi} sin(x)\,\mathrm{d}x = [-cos(x)]_0^{\pi} \]
-% section das_bestimmte_integral (end)
 
 \section{Integration durch Substitution} % (fold)
-\label{sec:integration_durch_substitution}
-Beispiel unbestimmtes Integral:
+\begin{bsp}Unbestimmtes Integral:
 \[ \int x \cdot cos(x^2)\,\mathrm{d}x\]
 \begin{enumerate}
 	\item Aufstellung der Substitutionsgleichung
@@ -50,14 +54,33 @@ Beispiel unbestimmtes Integral:
 	\item Rücksubstitution
 	\[ \int x \cdot cos(x^2)\,\mathrm{d}x = \frac{1}{2} \cdot sin(x^2) + C\]
 \end{enumerate}
-% section integration_durch_substitution (end)
+\end{bsp}
+
+\begin{bsp}Bestimmtes Integral:
+$$F(x) = \int\limits_{-1}^1 e^{2x} dx$$
+\begin{enumerate}
+\item Substitution
+$$ u = 2x \Rightarrow u' = \frac{du}{dx} = 2 \Rightarrow dx = \frac{du}{2}$$
+\item Grenzen substituieren
+$$ u(-1) = -2 \text{ ; } 
+u(1) = 2$$
+\item Rücksubtitution
+$$\frac{1}{2} \int\limits_{-2}^2 e^u du = \frac{1}{2} [e^u]_{-2}^2 = \frac{1}{2}(e^2 - e^{-2}) = 3.627$$
+\end{enumerate}
+\end{bsp}
+
 
 \section{Partielle Integration} % (fold)
 \label{sec:partielle_integration}
-\[ \int u \cdot v'\,\mathrm{d}x = u \cdot v - \int u' \cdot v\,\mathrm{d}x \]
+\[ \int (u \cdot v')\,\mathrm{d}x = u \cdot v - \int u' \cdot v\,\mathrm{d}x \]
 \[ \int_a^b u \cdot v'\,\mathrm{d}x = [u \cdot v]_a^b - \int_a^b u' \cdot v\,\mathrm{d}x \]
 Wenn der Integral-Minuend auf der rechten Seite gleich wie das Integral auf der linken Seite ist, kann es zur rechten Seite addiert werden und \emph{verschwindet} somit.
-% section partielle_integration (end)
+
+\begin{bsp}
+$$F(x) = \int x \cdot e^{k \cdot x} dx$$
+\textbf{TODO}
+\end{bsp}
+
 
 \section{Flächeninhalt} % (fold)
 \label{sec:flächeninhalt}

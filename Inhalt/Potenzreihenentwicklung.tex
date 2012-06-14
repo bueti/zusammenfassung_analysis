@@ -18,7 +18,7 @@ Besitzt die Partialsummenfolge $\left< s_n \right>$ jedoch \textit{keinen} Grenz
 \subsection{Konvergenzkriterien}
 \begin{definition}Für die \textit{Konvergenz} einer unendlichen Reihe $\sum\limits_{n=1}^{\infty} a_n$ ist die Bedingung 
 $$ \lim\limits_{n \rightarrow \infty} a_n = 0$$
-\textit{notwendig}, nicht aber hinreichend. Mit anderen Worten: Damit die unendliche Reihe \textit{konvergiert}, müssen die Reihenglieder diese Bedingung erfüllen. $\lim\limits_{n \rightarrow \infty} a_n = 0$ heisst aber keineswegs, das die unendliche Reihe konvergiert. Eine Reihe jedoch, die das notwendige Konvergenzkriterium nicht erfüllt, kann nicht konvergent sein und ist daher \textit{divergent}.
+\textit{notwendig}, nicht aber hinreichend. Eine Reihe, die das notwendige Konvergenzkriterium nicht erfüllt, ist \textit{divergent}.
 \end{definition}
 \begin{bsp}
 \begin{align*}
@@ -52,7 +52,7 @@ Erfüllen die Glieder einer unendlichen Reihe $\sum\limits_{n=1}^{\infty} a_n $ 
 so ist die Reihe \textit{konvergent}. 
 \end{definition}
 
-Für beide Kriterien gilt: Für \(q = 1\) versagt das Kriterium (keine Aussage möglich). Das Quotienten- oder Wurzelkriterium ist hinreichend aber nicht notwendig, d. h. es gibt Reihen, für die der Grenzwert nicht vorhanden ist aber trotzdem konvergieren.
+Für beide Kriterien gilt: Bei \(q = 1\) versagt das Kriterium (keine Aussage möglich). Das Quotienten- oder Wurzelkriterium ist hinreichend aber nicht notwendig, d. h. es gibt Reihen, für die der Grenzwert nicht vorhanden ist aber trotzdem konvergieren.
 
 \subsubsection*{Leibnizscheskriterium}
 \begin{definition}Eine \textit{alternierende} Reihe vom Typ
@@ -68,27 +68,11 @@ Beispiel:
 $$ \sum\limits_{n=1}^{\infty} (-1)^{n+1} \cdot \frac{1}{n!}  = \frac{1}{1!} - \frac{1}{2!} + \frac{1}{3!} ... $$ 
 $$ \lim\limits_{n\rightarrow \infty} \frac{1}{n!} = \lim\limits_{n\rightarrow \infty} \frac{1}{1 \cdot 2 \cdot 3 ...} = 0$$
 
-\subsubsection*{Wichtige Reihen}
-\begin{itemize}
-	\item Geometrische Reihe: \\$\sum\limits_{n=1}^{\infty} aq^{n-1} = a + aq + aq^2 + ... + aq^{n-1} + ... = \frac{a}{1-q}$  $(|q| <1) \text{ konvergiert! }$
-	\item Harmonische Reihe: $\sum\limits_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + ... \Rightarrow \text{ divergiert! }$
-	\item Alternierende harmonische Reihe: $\sum\limits_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + - ... = ln{2} \Rightarrow \text{ konvergiert! } $
-	\item $1 + \frac{1}{1!} + \frac{1}{2!}+\frac{1}{3!} + ... = e \Rightarrow \text{ absolute Konvergenz! }$
-\end{itemize}
-Gut zu wissen:
-\begin{itemize}
-	\item $(n+1)! = (n+1)n!$
-	\item $(n+2)! = (n+2)(n+1)!$
-	\item $n! = n(n-1)(n-2)(...) = n(n-1)!$
-	\item $2n! = 2n(2n-1)!$
-	\item $\lim\limits_{n \rightarrow \infty}(1+\frac{1}{2})^n = \lim\limits_{n \rightarrow \infty}\left(\frac{n+1}{n}\right)^n = e $
-\end{itemize}
-
 \subsection{Potenzreihen}
-\begin{definition}Eine \textit{Potenzreihe} ist eine unendliche Reihe vom Typ $$P(x)= \sum\limits_{n=0}^{\infty} a_n x^n = a_0 + a_1x^1 + a_2 x^2 ...$$
+\begin{definition}Eine \textit{Potenzreihe} ist eine unendliche Reihe vom Typ $$P(x)= \sum\limits_{n=0}^{\infty} a_n x^n = a_0 + a_1x^1 + a_2 x^2 ... a_nx^n$$
 Die reellen Zahlen $a_0, a_1, a_2, ...$ heissen \textit{Koeffizienten} der Potenzreihe. Der \textit{Konvergenzbereich} ist der gesamte Bereich in welchem die Reihe konvergiert. Der \textit{Konvergenzradius} ist eine Teilmenge des Konvergenzbereichs.
 \end{definition}
-Zu einer etwas allgemeineren Darstellungsform der Potenzreihen gelangt man durch die Definitionsvorschrift:
+Allgemeine Darstellungsform der Potenzreihen:
 $$P(x) = \sum\limits_{n=0}^{\infty} a_n (x-x_0)^n = a_0 + a_1(x-x_0)^1 + a_2(x-x_0)^2 + ... + a_n(x-x_0)^n + ...$$
 \begin{formel}
 Der Konvergenzradius $r$ einer Potenzreihe lässt sich nach den Formeln 
@@ -126,20 +110,6 @@ Wir entwickeln die Sinusfunktion um die Stelle $x_0 = \pi / 2$:
 $$\Rightarrow  sin(x) = 1 - \frac{1}{2!}\left(x-\frac{\pi}{2}\right)^2 + \frac{1}{4!}\left(x-\frac{\pi}{2}\right)^4 \pm ...$$
 $$ = 1 - \frac{\left(x-\frac{\pi}{2}\right)^2}{2!} + \frac{\left(x-\frac{\pi}{2}\right)^4}{4!} \pm ...$$
 $$\Rightarrow  \sum\limits_{n=0}^{\infty} (-1)^n \cdot \frac{(x-\pi / 2)^{2n}}{(2n)!}$$
-
-\subsubsection*{Mac Laurin Reihe der Exponentialfunktion}
-Wir bestimmen die Mac Laurinsche Reihe von $f(x) = e^x$:\\
-$f(x) = f'(x) = f''(x) = ... = f^{(n)}(x) = ... = e^x$\\
-$f(0) = f'(0) = f''(0) = ... = f^{(0)}(x) = ... = e^0 = 1$
-$$e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + ... + \frac{x^n}{n!} + ... = \sum\limits_{n=0}^{\infty} \frac{x^n}{n!}$$
-
-\subsubsection*{Mac Laurin Reihe der Cosinusfunktion}
-$$cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} +- ... =  \sum\limits_{n=0}^{\infty}(-1)^n \cdot \frac{x^{2n}}{(2n)!}$$
-
-\subsubsection*{Mac Laurin Reihe der Sinusfunktion}
-Die Mac Laurinsche Reihe der Sinusfunktion erhalten wir am bequemsten durch gliedweise Differentiation der Kosinusreihe:
-$$ = \sum\limits_{n=0}^{\infty} (-1)^n \cdot \frac{x^{2n+1}}{(2n+1)!}$$
-
 
 \subsection{Grenzwertregel von Bernoulli und de L'Hopital}
 \begin{definition}

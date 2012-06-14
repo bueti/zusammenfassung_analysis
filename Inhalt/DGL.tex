@@ -7,7 +7,13 @@ Eine gewöhnliche Differentialgleichung ist eine Gleichung mit den Ableitungen e
 Schreibweisen:
 \begin{itemize}
 	\item Implizit: $F(x, y, y', .. ,y^{(n)}) = 0$
+	\begin{itemize}
+		\item $y'' + 4y = 0$
+	\end{itemize}
 	\item Explizit: $y^{(n)} = f(x, y, y' .. y^{(n-1)})$
+	\begin{itemize}
+		\item $y''(t) = -4y$
+	\end{itemize}
 \end{itemize}
 
 Eine Funktion $y=y(x)$ heisst Lösung der DGL, wenn sie mit ihren Ableitungen die DGL identisch erfüllt. Wir unterscheiden:
@@ -62,7 +68,7 @@ Auflösen nach $y(x)$ liefert schliesslich (häufig) die gewünschte Lösung.
 \subsection{Vorgehen}
 \begin{enumerate}
 	\item \textit{Trennung} der beiden Variablen
-	\item \textit{Integration} auf beiden Seiten der Gleichung
+	\item \textit{Integration} auf beiden Seiten der Gleichung, Konstante $C$ auf der rechten Seite nicht vergessen!
 	\item \textit{Auflösen} der in Form einer impliziten Gleichung vom Typ $F_1(y) = F_2(x)$ vorliegenden allgemeinen Lösung nach der Variablen $y$ (falls möglich)
 \end{enumerate}
 
@@ -97,8 +103,14 @@ In einigen Fällen ist es möglich, eine explizite DGL 1. Ordnung mittels eine g
 \end{itemize}
 
 \begin{bsp}
+$y' = (1 + x + y)^2 \text{ ; } y(0) = 2$
 \begin{align*}
-.
+u &= 1 +x + y \rightarrow u' = 1 + y' \Rightarrow y' = u' -1 \\
+u' -1 &= u^2 \\
+\frac{du}{dx} -1 &= u^2 \Rightarrow \frac{du}{dx} = u^2 + 1 \Rightarrow \frac{du}{u^2+1} = dx \\
+\int \frac{1}{u^2+1} du &= \int 1 dx \Rightarrow arctan(u) = x + C \Rightarrow u = tan(x+C) \\
+1 + x + y &= tan(x+C) \Rightarrow y = tan(x+ C) -1 - x \Rightarrow arctan(3) &= C \\
+y&=arctan(3) -1 -x
 \end{align*}
 \end{bsp}
 
@@ -112,7 +124,23 @@ In einigen Fällen ist es möglich, eine explizite DGL 1. Ordnung mittels eine g
 \end{itemize}
 
 \begin{bsp}
+$y' = \frac{x+2y}{x} = 1 + 2\left(\frac{y}{x}\right)$
 \begin{align*}
-.
+u &= \frac{y}{x} \text{ , d. h. } y=xu \text{ , } y' = 1 \cdot u + x \cdot u' = u + xu' \\
+y' &= 1 + 2\left(\frac{y}{x}\right) \Rightarrow u + xu' = 1+ 2u\\
+xu' = x \frac{du}{dx} &= 1 + u \Rightarrow \frac{du}{u+1} = \frac{dx}{x} \\
+\int \frac{du}{u+1} &= \int \frac{dx}{x} \Rightarrow ln|u + 1| = ln|x| + ln |C| \Rightarrow ln|xC| \\
+u + 1 &= C X \text{  oder } u = Cx -1\\
+y & = xu = x(Cx -1) = Cx^2-x
 \end{align*}
 \end{bsp}
+
+\subsection{Rechenregeln}
+Kommen mehrere Integrationskonstanten vor, werden die zu einer Integrationskonstante zusammengefasst.
+Häufig benötigte Rechenregeln beim Lösen von DGL:
+\begin{itemize}
+		\item $ln(a) + ln(b) = ln ( a \cdot b)$; $ln(a) - ln(b) = \frac{ln(a)}{ln(b)}$
+		\item $n \cdot ln (a) = ln (a^n)$; $ln (e^n)  = n$
+		\item $ ln (a) = b \Rightarrow a = e^b$; $ln(a) = ln (b) \Rightarrow a = b$; $e^{ln(a)} = a$
+		\item $|x| = a > 0 \Rightarrow x = \pm a$; $|x| = |a| \Rightarrow x = \pm a$
+\end{itemize}

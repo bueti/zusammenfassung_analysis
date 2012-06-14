@@ -1,0 +1,60 @@
+\section{Ableitungen der elementaren Funktionen}
+
+\begin{longtable}{|l|l|l|}
+	\hline
+	\multicolumn{2}{|l|}{Funktion f(x)}  & Ableitung f'(x) \\
+	\hline
+	Konstante Funktion & c = const & 0 \\
+	\hline
+	Potenzfunktion & \(x^n\) \newline \((x^2)^{-\frac{1}{2}} \) & \(n \cdot x^{n-1}\) \newline \(\frac{1}{(x^{2})^{\frac{1}{2}}}\) \\
+	\hline
+	Wurzelfunktion & \(\sqrt{x}\) gilt nur für 2. Wurzel & \(\frac{1}{2 \sqrt{x}}\) \\
+	\hline
+	\multirow{4}{*}{Trigonometrische Funktionen} & \(sin x\) \newline \(sin 2x\) & \(cos x\) \newline \(2 cos (2x)\) \\ \cline{2-3}
+	& \(cos(x)\)  & \(-sin x\) \\ \cline{2-3}
+	& \(tan(x)\) & \(\frac{1}{cos^2(x)}\), \( 1 + tan^2(x) \) \\ \cline{2-3}
+	& \(cot(x)\) & \(-\frac{1}{sin^2(x)}\) \\
+	\hline
+	\multirow{4}{*}{Arkusfunktionen} & \(arcsin(x)\) & \(\frac{1}{\sqrt{1 - x^2}} \) \\ \cline{2-3}
+	& \(arccos(x)\) & \(-\frac{1}{\sqrt{1-x^2}}\) \\ \cline{2-3}
+	& \(arctan(x)\) & \(\frac{1}{1+x^2}\) \\ \cline{2-3}
+	& \(arccot(x)\) & \(-\frac{1}{1+x^2}\) \\
+	\hline
+	\multirow{3}{*}{Exponentialfunktionen} & \(e^x\) & \( e^x \) \\ \cline{2-3}
+	& \(e^{2x}\) & \( 2e^{2x} \) \\ \cline{2-3}
+	& \(a^x\) & \((ln a) \cdot a^x \) \\ \hline
+	\multirow{2}{*}{Logarithmusfunktionen} & \(ln x\) & \( \frac{1}{x} \) \\ \cline{2-3}
+	& \(log_a x\) & \( \frac{1}{(ln a) \cdot x } \) \\ \hline
+	\multicolumn{3}{|l|}{Hyperbelfunktionen, Areafunktionen: Siehe Seite 17 im Skript.} \\ \hline
+\end{longtable}
+
+\section{Wichtige Reihen}
+\begin{itemize}
+	\item Geometrische Reihe: \\$\sum\limits_{n=1}^{\infty} aq^{n-1} = a + aq + aq^2 + ... + aq^{n-1} + ... = \frac{a}{1-q}$  $(|q| <1) \text{ konvergiert! }$
+	\item Harmonische Reihe: $\sum\limits_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + ... \Rightarrow \text{ divergiert! }$
+	\item Alternierende harmonische Reihe: $\sum\limits_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + - ... = ln{2} \Rightarrow \text{ konvergiert! } $
+	\item $1 + \frac{1}{1!} + \frac{1}{2!}+\frac{1}{3!} + ... = e \Rightarrow \text{ absolute Konvergenz! }$
+\end{itemize}
+Gut zu wissen:
+\begin{itemize}
+	\item $(n+1)! = (n+1)n!$
+	\item $(n+2)! = (n+2)(n+1)!$
+	\item $n! = n(n-1)(n-2)(...) = n(n-1)!$
+	\item $2n! = 2n(2n-1)!$
+	\item $\lim\limits_{n \rightarrow \infty}(1+\frac{1}{2})^n = \lim\limits_{n \rightarrow \infty}\left(\frac{n+1}{n}\right)^n = e $
+\end{itemize}
+
+\subsubsection*{Mac Laurin Reihe der Exponentialfunktion}
+Wir bestimmen die Mac Laurinsche Reihe von $f(x) = e^x$:\\
+$f(x) = f'(x) = f''(x) = ... = f^{(n)}(x) = ... = e^x$\\
+$f(0) = f'(0) = f''(0) = ... = f^{(0)}(x) = ... = e^0 = 1$
+$$e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + ... + \frac{x^n}{n!} + ... = \sum\limits_{n=0}^{\infty} \frac{x^n}{n!}$$
+
+\subsubsection*{Mac Laurin Reihe der Cosinusfunktion}
+$$cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} +- ... =  \sum\limits_{n=0}^{\infty}(-1)^n \cdot \frac{x^{2n}}{(2n)!}$$
+
+\subsubsection*{Mac Laurin Reihe der Sinusfunktion}
+Die Mac Laurinsche Reihe der Sinusfunktion erhalten wir am bequemsten durch gliedweise Differentiation der Kosinusreihe:
+$$ = \sum\limits_{n=0}^{\infty} (-1)^n \cdot \frac{x^{2n+1}}{(2n+1)!}$$
+
+\include{Inhalt/Komplexe_Zahlen_und_Funktionen}

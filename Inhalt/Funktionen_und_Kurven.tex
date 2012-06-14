@@ -4,9 +4,8 @@
 Unter einer Funktion versteht man eine Vorschrift, die jedem Element \(x\) aus einer Menge \(D\) genau ein Element \(y\) aus einer Menge \(M\) zuordnet.
 
 \subsection{Darstellung}
-Symbolische Schreibweise
-\newline \(y = f(x)\) mit \(x \in D\) oder
-\newline \(f: x \rightarrow y = f(x)\) mit \(x \in D\)
+Symbolische Schreibweise:
+$$y = f(x) \text{ mit } x \in D \text{ oder } f: x \rightarrow y = f(x) \text{ mit } x \in D$$
 
 \subsection{Analytische Schreibweise}
 Explizite Darstellung: \(y = f (x) \)
@@ -14,8 +13,7 @@ Explizite Darstellung: \(y = f (x) \)
 
 \subsection{Nullstellen} % (fold)
 \label{sec:nullstellen}
-Eine Funktion \(y = f(x)\) besitzt an der Stelle \(x_{0}\) eine Nullstelle, wenn \(f(x_{0}) = 0\) ist.
-\newline In einer Nullstelle schneidet oder berührt die Funktionskurve die x-Achse!
+Eine Funktion \(y = f(x)\) besitzt an der Stelle \(x_{0}\) eine Nullstelle, wenn \(f(x_{0}) = 0\) ist. In einer Nullstelle schneidet oder berührt die Funktionskurve die x-Achse!
 
 \section{Symmetrie} % (fold)
 \subsection{Gerade Funktionen} % (fold)
@@ -27,7 +25,8 @@ Eine Funktion \(y = f(x)\) mit einem zum Nullpunkt symmetrischen Definitionsbere
 \newline \(f(-x) = -f(x)\)
 
 \subsection{Beweis}
-Um zu Beweisen ob eine Funktione gerade oder ungerade ist, setzt man -x in die Funktion ein.
+Um zu Beweisen ob eine Funktion gerade oder ungerade ist, setzt man $-x$ in die Funktion ein.
+\textbf{TODO: }\textit{Elaborate this!!!}
 
 \subsection{Hornerschema}
 Vorgehen:
@@ -57,32 +56,35 @@ Funktion: \( x^3-6x^2-4x^3+24\) \newline
 Eine Funktion \(y = f(x)\) heisst periodisch mit Periode \(p\), wenn mit jedem \(x \in D\) auch \(x \pm p\) zum Definitionsbereich \(D\) der Funktion gehört und es gilt:
 \newline \(f(x \pm p) = f(x)\)
 
-\section{Umkehr/inverse Funktion}
-Eine Funktion \(y = f(x)\) heisst umkehrbar, wenn aus \(x_{1} \neq x_{2}\) stets \(f(x_{1}) \neq f(x_{2})\) folgt. Sie muss streng monoton sein!
-\par
-Der Definitions- und Wertebereich wird bei einer Umkehrung getauscht:
-\newline \(f^{-1}(f(x)) = x = f(f^{-1}(x))\)
-\newline Bestimmung:
-\begin{enumerate}
-	\item nach \(x\) auflösen
-	\item \(x\) und \(y\) tauschen
-\end{enumerate}
+%%
+%% Wird nicht geprüft
+%%
+%\section{Umkehr/inverse Funktion}
+%Eine Funktion \(y = f(x)\) heisst umkehrbar, wenn aus \(x_{1} \neq x_{2}\) stets \(f(x_{1}) \neq f(x_{2})\) folgt. Sie muss streng monoton sein!
+%\par
+%Der Definitions- und Wertebereich wird bei einer Umkehrung getauscht:
+%\newline \(f^{-1}(f(x)) = x = f(f^{-1}(x))\)
+%\newline Bestimmung:
+%\begin{enumerate}
+%	\item nach \(x\) auflösen
+%	\item \(x\) und \(y\) tauschen
+%\end{enumerate}
+
 \section{Reelle Zahlenfolgen}
 \subsection{Grenzwert/Limes}
 \begin{itemize}
-	\item Die reelle Zahl \(g\) heisst \textbf{Grenzwert} (Limes) der Zahlenfolge \(a_{n}\), wenn es zu jedem \(\in > 0\) eine natürliche Zahl \(n_{0} > 0\) gibt, so dass für alle \(n > n{0}\) stets gilt: \(|a_{n}-g| < \in \)
+	\item Die reelle Zahl \(g\) heisst \textbf{Grenzwert} (Limes) der Zahlenfolge \(a_{n}\), wenn es zu jedem \(\in > 0\) eine natürliche Zahl \(n_{0} > 0\) gibt, so dass für alle \(n > n_{0}\) stets gilt: \(|a_{n}-g| < \in \)
 	\item Eine Folge \(a_{n}\) heisst \textbf{konvergent}, wenn sie einen Grenzwert \(g\) besitzt.
 	\newline Symbolische Schreibweise: \(\lim\limits_{n \rightarrow \infty}{a_n} = g \)
 \end{itemize}
 
 \subsection{Stetigkeit einer Funktion}
 Eine in \(x_0\) und einer gewissen Umgebung von \(x_0\) definierten Funktion \(y=f(x)\) heisst an der Stelle \(x_0\) stetig, wenn der Grenzwert der Funktion an dieser Stelle vorhanden ist und mit dem dortigen Funktionswert übereinstimmt:
-\newline
-\hspace*{10mm}\(\lim\limits_{x \rightarrow x_0}{f(x)} = f(x_0)\)
-\newline Graphisch: Die Funktion macht keinen Sprung.
+$$\lim\limits_{x \rightarrow x_0}{f(x)} = f(x_0)$$
+Graphisch: Die Funktion macht keinen Sprung.
 
 \subsection{Unstetigkeit}
-Stellen in denen eine Funktion die Stetigkeitsbedingung \(\lim\limits_{x \rightarrow x_0}{f(x)} = f(x_0)\) nicht erfüllt ist, heissen Unstetigkeitsstellen.
+Stellen, in denen eine Funktion die Stetigkeitsbedingung \(\lim\limits_{x \rightarrow x_0}{f(x)} = f(x_0)\) nicht erfüllt ist, heissen Unstetigkeitsstellen.
 \newline Eine Funktion \(f(x)\) ist also an der Stelle \(x_0\) unstetig, wenn mindestens einer der folgenden Aussagen zutrifft:
 \begin{itemize}
 	\item \(f(x)\) ist an der Stelle \(x_0\) nicht definiert
