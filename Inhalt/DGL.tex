@@ -144,3 +144,68 @@ Häufig benötigte Rechenregeln beim Lösen von DGL:
 		\item $ ln (a) = b \Rightarrow a = e^b$; $ln(a) = ln (b) \Rightarrow a = b$; $e^{ln(a)} = a$
 		\item $|x| = a > 0 \Rightarrow x = \pm a$; $|x| = |a| \Rightarrow x = \pm a$
 \end{itemize}
+
+\section{Lineare DGL 1. Ordnung}
+\subsection{Definition}
+\begin{definition}
+Eine Differentialgleichung 1. Ordnung heisst \textit{linear}, wenn sie in der Form
+$$y' + f(x) \cdot y = g(x)$$
+darstellbar ist. Die Funktion $g(x)$ wird als Störfunktion bezeichnet. Verschwindet sie, als $g(x) = 0$ für alle $x$, heisst die lineare DGL \textbf{homogen}, ansonsten \textbf{inhomogen}.
+\end{definition}
+\begin{bsp}
+Linear:
+\begin{itemize}
+	\item $x'1 -xy = 0$ Homogen
+	\item $xy' + 2y = e^x$ Inhomogen
+	\item $x' + (tanx)\cdot y = 2 \cdot sinx \cdot cos x$ Inhomogen
+\end{itemize}
+\end{bsp}
+
+\subsection{Integration einer homogenen linearen DGL}
+Eine \textit{homogene} lineare DGL 1. Ordnung vom Typ
+$$y' + f(x) \cdot y = 0$$
+wird durch \textit{Trennung der Variablen} gelöst. Die allgemeine Lösung ist dann in der Form
+$$y = C \cdot e^{ - \int f(x) dx}$$
+darstellbar ($C \in \mathbb{R}$).
+\begin{bsp}
+$y' - 2xy = 0$
+\begin{align*}
+\frac{dy}{dx}-2xy &= 0 \Rightarrow \frac{dy}{dx}=2xy \Rightarrow \frac{dy}{y} = 2x dx \\
+\int\frac{dy}{y}  &= \int 2x dx \Rightarrow ln|y| \\
+= ln \left|\frac{y}{C}\right| &= x^2 \\
+\Rightarrow \frac{y}{C} &= e^{x^2} \\
+y &= e^{x^2} \cdot C 
+\end{align*}
+\end{bsp}
+
+\subsection{Integration einer inhomogenen linearen DGL}
+Eine \textit{inhomogene} lineare DGL 1. Ordnung vom Typ
+$$y' + f(x) \cdot y = g(x)$$
+wird durch \textit{Variation der Konstanten} schrittweise wie folgt gelöst. 
+\begin{enumerate}
+	\item Integration der zugehörigen homogenen DGL $y' + f(x) \cdot y = 0$ durch Trennung der Variablen:
+	$$y_0 = K \cdot e^{- \int f(x) dx}$$
+	\item Die Integrationskonstante $K$ wird durch eine (noch unbekannte) Funktion $K(x)$ ersetzt. Mit dem Lösungsansatz:
+	$$y=K(x) \cdot e^{- \int f(x) dx}$$
+	geht man dann in die inhomogen lineare DGL ein und erhält eine einfache DGL 1. Ordnung für die Faktorfunktion $K(x)$, die durch unbestimmte Integration gelöst werden kann.
+\end{enumerate}
+
+\begin{bsp}
+$y' + \frac{y}{x} = cos x$, ($x \neq 0$).\newline
+\begin{enumerate}
+	\item Zugehörige homogene DGL lösen:
+	$$y' + \frac{y}{x} = 0 \Rightarrow \int \frac{dy}{y} = - \int \frac{dx}{x} \Rightarrow y_0 = \frac{K}{x}$$
+	\item inhomogene DGL durch Variation der Konstanten lösen ($K \rightarrow K(x)$).
+	$$y = \frac{K(x)}{x}\text{ , } y' = \frac{K'(x) \cdot x -1 \cdot K(x)}{x^2} = \frac{K'(x)}{x} - \frac{K(x)}{x^2}$$
+	\item Diese Ausdrücke in die inhomogene DGL einsetzen:
+	\begin{align*}
+	y' + \frac{y}{x} = \frac{K'(x)}{x} - \frac{K(x)}{x^2} + \frac{K(x)}{x^2} = cos(x) \\
+	\Rightarrow \frac{K'(x)}{x} = cos x \text{  oder  } K'(x) = x \cdot cos(x)
+	\end{align*}
+	
+	\item Durch unbestimmte Integration folgt hieraus
+	$$K(x) = \int K'(x) dx = \int x \cdot cos (x) = cos(x) + x \sin(x) + C$$
+	\item Die inhomogene DGL besitzt als folgende allgemeine Lösung:
+	$$y= \frac{K(x)}{x} = \frac{cos(x) + x \cdot sin(x) + C}{x}$$
+\end{enumerate}
+\end{bsp}
